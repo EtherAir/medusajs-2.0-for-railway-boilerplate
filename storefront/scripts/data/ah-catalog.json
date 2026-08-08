@@ -1,0 +1,1619 @@
+{
+  "generatedFrom": "Ascended_Health_Catalog_Migration.xlsx",
+  "generatedAt": "2026-08-08T23:54:42.071Z",
+  "categories": [
+    {
+      "handle": "dental-gum-care",
+      "title": "Dental & Gum Care",
+      "numeral": "I.",
+      "tint": "dental",
+      "rank": 0
+    },
+    {
+      "handle": "skin-regeneration",
+      "title": "Skin Regeneration",
+      "numeral": "II.",
+      "tint": "skin",
+      "rank": 1
+    },
+    {
+      "handle": "superfood-supplements",
+      "title": "Concentrated Superfood Supplements",
+      "numeral": "III.",
+      "tint": "superfood",
+      "rank": 2
+    },
+    {
+      "handle": "energetic-consciousness",
+      "title": "Energetic Consciousness",
+      "numeral": "IV.",
+      "tint": "energy",
+      "rank": 3
+    },
+    {
+      "handle": "skin-infection-healing",
+      "title": "Skin Infection & Healing",
+      "numeral": "V.",
+      "tint": "skin",
+      "rank": 4
+    },
+    {
+      "handle": "liquid-probiotics",
+      "title": "Liquid Probiotics",
+      "numeral": "VI.",
+      "tint": "probiotic",
+      "rank": 5
+    },
+    {
+      "handle": "longevity",
+      "title": "Longevity",
+      "numeral": "VII.",
+      "tint": "longevity",
+      "rank": 6
+    },
+    {
+      "handle": "ah-cafe",
+      "title": "AH Cafe",
+      "numeral": "VIII.",
+      "tint": "superfood",
+      "rank": 7
+    }
+  ],
+  "products": [
+    {
+      "productId": "AH-001",
+      "handle": "regular-strength-oralive",
+      "title": "Regular Strength Oralive Toothpaste",
+      "subtitle": "all vegan natural toothpaste and oral elixir with live enzymes and probiotics, activated by saliva.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "dental-gum-care"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/gum-disease/gum_disease_remedy.htm",
+      "copy": {
+        "shortDescription": "All vegan natural toothpaste and oral elixir with live enzymes and probiotics, activated by saliva.",
+        "fullDescription": "This organic nutritional supplement is designed to help your teeth, gums, and mouth detoxify naturally. Its natural ingredients have been known to inhibit bacteria causing cavities, gum pain, tooth pain, plaque and gingivitis, alleviate gum pain and gum bleeding, and whiten teeth. Taken orally, the natural botanical ingredients are absorbed through the gum mucosa. This formula is a living paste filled with enzymes, minerals and pro-biotics in the natural state. The mixture of natural high energy earth minerals, activated herbal extracts, oxygen, and marine phytoplankton give the elixir its healthy charcoal earth tone. It is sweet and minty. 50 ml is the popular travel and day size designed to last one month. The 100 ml economical larger size is designed to last 3 months. 100% natural and vegan, suitable for children.",
+        "directions": "Use 1-3 times per day. Use a pea-sized amount and brush without adding water. After brushing, swish for 30 seconds to 5 minutes before swallowing or spitting. Resist rinsing with water or mouthwash after use. Does not require refrigeration, minimum shelf life one year. Safe to swallow.",
+        "ingredients": "Contains Xylitol (sweetened). Live enzymes, minerals, probiotics, herbal extracts, oxygen, marine phytoplankton. See label image.",
+        "warnings": "",
+        "crossSellNames": "Unsweetened Regular Oralive; Super Gum Oil; Extra Strength Oralive"
+      },
+      "variants": [
+        {
+          "title": "50 ml (Travel Size)",
+          "sku": "AH-REGU-STRE-ORAL-50ML",
+          "price": 35,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "50 ml",
+          "quantity": 100
+        },
+        {
+          "title": "100 ml (Large)",
+          "sku": "AH-REGU-STRE-ORAL-100ML",
+          "price": 50,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "100 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Gum_RegularOralive_set_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/regular-strength-oralive/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/oralive-2oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/regular-strength-oralive/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/oralive-5oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/regular-strength-oralive/03-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Oralive_4x1.25Bleed_2oz.png",
+          "role": "Label",
+          "localPath": "public/images/ah/source/regular-strength-oralive/04-label.png"
+        }
+      ],
+      "notes": [
+        "Designed to last 1 month",
+        "Designed to last 3 months"
+      ],
+      "crossSell": [
+        "super-gum-oil",
+        "extra-strength-oralive"
+      ],
+      "cardImage": "/images/ah/products/regular-strength-oralive.jpg"
+    },
+    {
+      "productId": "AH-002",
+      "handle": "unsweetened-oralive",
+      "title": "Unsweetened Regular Strength Oralive",
+      "subtitle": "same formula as regular oralive but without xylitol. vegan, safe for children and pets.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "dental-gum-care"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/gum-disease/unsweetened_oralive.htm",
+      "copy": {
+        "shortDescription": "Same formula as Regular Oralive but without Xylitol. Vegan, safe for children and pets.",
+        "fullDescription": "This nutritional supplement is designed to help your teeth, gums, and mouth detoxify naturally. Unsweetened Regular Strength Oralive is without Xylitol. Its natural ingredients have been known to inhibit bacteria that cause cavities, gum pain, plaque and gingivitis, alleviate gum pain and gum bleeding, and whiten teeth. Many clients prefer to use this as a replacement for their toothpaste. It is a living paste filled with enzymes, minerals and pro-biotics in the raw natural state. Contains powerful herbal essential oils including Rose Absolute (Bulgaria), Rose Otto (Turkey), Jasmine and Spikenard. Vegan and safe for children and pets.",
+        "directions": "Use 1-3 times per day. Pea-sized amount, brush without water, then swish 30 seconds to 5 minutes before swallowing or spitting. At night brush before bed and do not rinse. Does not require refrigeration, minimum shelf life one year.",
+        "ingredients": "No Xylitol. Live enzymes, minerals, probiotics, herbal essential oils (Rose Absolute, Rose Otto, Jasmine, Spikenard), marine phytoplankton.",
+        "warnings": "",
+        "crossSellNames": "Regular Strength Oralive; Super Gum Oil; Extra Strength Oralive"
+      },
+      "variants": [
+        {
+          "title": "50 ml (Travel Size)",
+          "sku": "AH-UNSW-ORAL-50ML",
+          "price": 30,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "50 ml",
+          "quantity": 0
+        },
+        {
+          "title": "100 ml (Large)",
+          "sku": "AH-UNSW-ORAL-100ML",
+          "price": 45,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "100 ml",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Gum_RegularOralive_set_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/unsweetened-oralive/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/oralive-2oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/unsweetened-oralive/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/oralive-5oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/unsweetened-oralive/03-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/labels/lbl_Oralive_unsweetened_800x282.gif",
+          "role": "Label",
+          "localPath": "public/images/ah/source/unsweetened-oralive/04-label.gif"
+        }
+      ],
+      "notes": [
+        "Out of stock at capture",
+        "Out of stock at capture"
+      ],
+      "crossSell": [
+        "regular-strength-oralive",
+        "super-gum-oil",
+        "extra-strength-oralive"
+      ],
+      "cardImage": "/images/ah/products/unsweetened-oralive.jpg"
+    },
+    {
+      "productId": "AH-003",
+      "handle": "super-gum-oil",
+      "title": "Super Gum Oil",
+      "subtitle": "undiluted, highly oxygenated blend of antimicrobial and pain-relieving essential oils for gum pain.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "dental-gum-care"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/gum-disease/gum_disease_remedy_oil.htm",
+      "copy": {
+        "shortDescription": "Undiluted, highly oxygenated blend of antimicrobial and pain-relieving essential oils for gum pain.",
+        "fullDescription": "This powerful concentrated concoction is a highly oxygenated blend of antimicrobial and pain-relieving essential oils that can help numb the pain experienced in the gums. As a concentrate you will only need a drop or less to dramatically alleviate gum pain within 24 hrs, inhibit bacteria causing the infection, and whiten teeth. This is the pure undiluted oil concentrate straight from the resonation chambers, fully saturated with oxygen, hyper-activated anti-microbial essential oils, analgesic oil extracts, and vibrational energies. Start with just a little dab using a saturated cotton swab on the affected area.",
+        "directions": "Place a small dab from the dropper on a cotton swab and apply to the affected area. Leave in place until the pain stops. When brushing, add a couple of drops to your toothbrush with Regular Oralive. Can be used for oil pulling. Also used for toenail fungus (apply one drop to clean dry toenails).",
+        "ingredients": "Oxygenated anti-microbial essential oils (e.g. Oregano Oil, Neem), analgesic extracts. Frequencies: 7.83 Hz Schumann, 728 Hz Rife.",
+        "warnings": "Very concentrated. Use sparingly.",
+        "crossSellNames": "Regular Strength Oralive; Unsweetened Oralive; Extra Strength Oralive"
+      },
+      "variants": [
+        {
+          "title": "15 ml",
+          "sku": "AH-SUPE-GUM-OIL-15ML",
+          "price": 60,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "15 ml",
+          "quantity": 100
+        },
+        {
+          "title": "30 ml",
+          "sku": "AH-SUPE-GUM-OIL-30ML",
+          "price": 115,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/supergum-oil-15ml.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/super-gum-oil/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Oil_SuperGumOil_600x323.jpg",
+          "role": "Label",
+          "localPath": "public/images/ah/source/super-gum-oil/02-label.jpg"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "regular-strength-oralive",
+        "extra-strength-oralive"
+      ],
+      "cardImage": "/images/ah/products/super-gum-oil.jpg"
+    },
+    {
+      "productId": "AH-004",
+      "handle": "extra-strength-oralive",
+      "title": "Extra Strength Oralive Toothpaste",
+      "subtitle": "double concentration of oils and botanicals versus regular oralive. for severe gum and tooth pain.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "dental-gum-care"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/gum-disease/gum_disease_remedy_xs.htm",
+      "copy": {
+        "shortDescription": "Double concentration of oils and botanicals versus Regular Oralive. For severe gum and tooth pain.",
+        "fullDescription": "The Extra Strength elixir has full on undiluted power. Packed with essential oils and Amazon herbs, designed to help the body quell severe gum and tooth pain, stop gum bleeding, and inhibit infections in the mouth. Contains twice the concentration of oils and botanical extracts as the regular version, plus bala root, iporuru, sangre de grado (Dragon's Blood) and kava kava. Taking and swallowing this elixir is similar to taking many herbal and nutritional supplements for general body detoxification, healing and bone regeneration.",
+        "directions": "Use 1-3 times per day. Pea-sized amount, brush without water, swish 30 seconds to 5 minutes. Resist rinsing after use. Vegan. Does not require refrigeration, minimum shelf life one year. Safe to swallow.",
+        "ingredients": "2x oils and botanicals vs Regular. Includes bala root, iporuru, sangre de grado, kava kava, Rose Absolute, Rose Otto, Jasmine, Spikenard, marine phytoplankton.",
+        "warnings": "",
+        "crossSellNames": "Regular Strength Oralive; Unsweetened Oralive; Super Gum Oil"
+      },
+      "variants": [
+        {
+          "title": "50 ml",
+          "sku": "AH-EXTR-STRE-ORAL-50ML",
+          "price": 55,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "50 ml",
+          "quantity": 100
+        },
+        {
+          "title": "100 ml",
+          "sku": "AH-EXTR-STRE-ORAL-100ML",
+          "price": 80,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "100 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Gum_EXOralive_set_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/extra-strength-oralive/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/xs-oralive-2oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/extra-strength-oralive/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/xs-oralive-5oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/extra-strength-oralive/03-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/OraliveXS_4x1.25Bleed_2oz.png",
+          "role": "Label",
+          "localPath": "public/images/ah/source/extra-strength-oralive/04-label.png"
+        }
+      ],
+      "notes": [
+        "Legacy href on 50 ml add-to-cart pointed to wrong page; fix at migration"
+      ],
+      "crossSell": [
+        "regular-strength-oralive",
+        "super-gum-oil"
+      ],
+      "cardImage": "/images/ah/products/extra-strength-oralive.jpg"
+    },
+    {
+      "productId": "AH-005",
+      "handle": "i-am-beautiful-oil",
+      "title": "I Am Beautiful Skin Regeneration Oil",
+      "subtitle": "deeply nourishing oxygenated facial oil with marine phytoplankton for skin regeneration.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-regeneration"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/oil_iambeautiful.htm",
+      "copy": {
+        "shortDescription": "Deeply nourishing oxygenated facial oil with marine phytoplankton for skin regeneration.",
+        "fullDescription": "Indulge your skin with this deeply nourishing oxygenated oil designed to promote skin regeneration from the effects of exposure, aging and sun damage. Through our resonance process this unique oil blend is activated with regenerative frequencies. We have added Marine Phytoplankton, naturally rich in growth promoting elements. It smells wonderful, earthy with a slight citrus treble note and hints of jasmine and rose.",
+        "directions": "Apply to face, ideally after a shower and after DermAlive.",
+        "ingredients": "Oxygenated oils, marine phytoplankton, jasmine, rose.",
+        "warnings": "",
+        "crossSellNames": "DermAlive Topical Probiotic; Anti-Venom Balm; Triple Skin Oil"
+      },
+      "variants": [
+        {
+          "title": "15 ml",
+          "sku": "AH-I-AM-BEAU-15ML",
+          "price": 65,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "15 ml",
+          "quantity": 100
+        },
+        {
+          "title": "30 ml",
+          "sku": "AH-I-AM-BEAU-30ML",
+          "price": 125,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Oil_IAmBeautiful02_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/i-am-beautiful-oil/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/i-am-beautiful-spray-15ml.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/i-am-beautiful-oil/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Oil_IAmBeautifulOil_3x1.5Bleed_15ml.png",
+          "role": "Label",
+          "localPath": "public/images/ah/source/i-am-beautiful-oil/03-label.png"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "dermalive-topical-probiotic",
+        "anti-venom-balm",
+        "triple-skin-oil"
+      ],
+      "cardImage": "/images/ah/products/i-am-beautiful-oil.jpg"
+    },
+    {
+      "productId": "AH-006",
+      "handle": "triple-skin-oil",
+      "title": "Triple Skin Oil",
+      "subtitle": "signature medicinal oil for burns, cuts, acne and lesions. alleviates pain, stops infection, starts regeneration.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-regeneration",
+        "skin-infection-healing"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/oil_TripleSkin.htm",
+      "copy": {
+        "shortDescription": "Signature medicinal oil for burns, cuts, acne and lesions. Alleviates pain, stops infection, starts regeneration.",
+        "fullDescription": "Our signature medicinal oil for all first aid drawers. Super concentrated with dissolved oxygen, essential oils known to be natural antibiotics, and tissue regeneration factors. Triple action designed to alleviate pain, stop infection and start skin regeneration for cuts, burns, acne, and ulcerative lesions. Uses a blend of oils high in polyunsaturated double and triple carbon bonds to create an oil high in bonded oxygen. In many cases results are seen within five days and full recovery in three to four weeks.",
+        "directions": "Apply topically to affected area. If using with Anti-Venom Balm, apply the oil first and let it absorb.",
+        "ingredients": "Oxygenated oils (hydroperoxides, ozonides, peroxides), antimicrobial essential oils, skin fibroblast growth enhancers. Frequencies: 7.83 Hz, 728 Hz.",
+        "warnings": "If you are allergic to peanuts you may have sensitivity to this oil. Test on a small spot for 24 hours.",
+        "crossSellNames": "I Am Beautiful Oil; DermAlive Topical Probiotic; Anti-Venom Balm; Electrical Neopulser"
+      },
+      "variants": [
+        {
+          "title": "15 ml",
+          "sku": "AH-TRIP-SKIN-OIL-15ML",
+          "price": 60,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "15 ml",
+          "quantity": 100
+        },
+        {
+          "title": "30 ml",
+          "sku": "AH-TRIP-SKIN-OIL-30ML",
+          "price": 115,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/triple-skin-oil-15ml.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/triple-skin-oil/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/triple-skin-oil-30ml.jpg",
+          "role": "Additional"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "dermalive-topical-probiotic",
+        "anti-venom-balm",
+        "electrical-neopulser"
+      ],
+      "cardImage": "/images/ah/products/triple-skin-oil.jpg"
+    },
+    {
+      "productId": "AH-007",
+      "handle": "dermalive-topical-probiotic",
+      "title": "DermAlive Topical Probiotic",
+      "subtitle": "premium probiotic skin rejuvenation formula that helps skin maintain a natural balance of beneficial microbes.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-regeneration"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/Probiotic_DermAliveSpray.htm",
+      "copy": {
+        "shortDescription": "Premium probiotic skin rejuvenation formula that helps skin maintain a natural balance of beneficial microbes.",
+        "fullDescription": "This premium probiotic skin rejuvenation formula is specifically designed to help your skin maintain a natural balance of healthy beneficial microbes. Our breakthrough formula can help skin recover from past UV damage while stimulating its capacity to resist future photodamage, and even reduce the visible symptoms of collagen degradation. Contains powerful biomicrobial elements and herbs known to fight viral, fungal and bacterial skin conditions such as acne, rashes and open sores. A few drops feed, nourish and rejuvenate skin cells and their natural microbial inhabitants.",
+        "directions": "Apply on skin as needed. For best results apply to face after a shower, then apply I Am Beautiful Oil.",
+        "ingredients": "Structured water, L. casei, L. plantarum, L. paracasei, L. curvatus, L. acidophilus and other microflora, magnetic healing earth, fulvic acid, humic acid, zeolites, colloidal silver.",
+        "warnings": "",
+        "crossSellNames": "I Am Beautiful Oil; Triple Skin Oil; Anti-Venom Balm"
+      },
+      "variants": [
+        {
+          "title": "30 ml",
+          "sku": "AH-DERM-TOPI-PROB-30ML",
+          "price": 100,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Probiotic_Dermalive Spray 400x300.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/dermalive-topical-probiotic/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/dermalive-1oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/dermalive-topical-probiotic/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Probiotic_DermAlive_3x1.5Bleed_30ml.jpg",
+          "role": "Label",
+          "localPath": "public/images/ah/source/dermalive-topical-probiotic/03-label.jpg"
+        }
+      ],
+      "notes": [
+        "Single size"
+      ],
+      "crossSell": [
+        "triple-skin-oil",
+        "anti-venom-balm"
+      ],
+      "cardImage": "/images/ah/products/dermalive-topical-probiotic.jpg"
+    },
+    {
+      "productId": "AH-008",
+      "handle": "sufi-bliss-ascension-oil",
+      "title": "Sufi Bliss Ascension Oil",
+      "subtitle": "best-selling aromatic oil encoded with vibrational frequencies. libido enhancing and anti-anxiety.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "energetic-consciousness"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/oil_SufiBlissAscension.htm",
+      "copy": {
+        "shortDescription": "Best-selling aromatic oil encoded with vibrational frequencies. Libido enhancing and anti-anxiety.",
+        "fullDescription": "This is our most electrifying and popular oil. Meant to align your body's electrical spin to the earth's natural resonance, it makes you smell divine. Appropriate for women and men. It is libido enhancing, anti-anxiety, and it can change emotional vibrations in a room. The oils are prepared by the Sufi Masters of Afghanistan by cold rolling, and are subject to the high vibrational rates of many ancient Qurans, Torahs, Bibles, holy texts, prayers and chants.",
+        "directions": "Use sparingly, very concentrated. Place small dabs on wrists, temples, back of neck, thymus and crown.",
+        "ingredients": "Cold-rolled Sufi base oils. Frequencies: 7.83 Hz Schumann, 44 Hz, dolphin and whale frequencies, Kabbalah 72 names of God.",
+        "warnings": "Very concentrated.",
+        "crossSellNames": "Lemurian Crystal ORMUS; Energetic Consciousness line"
+      },
+      "variants": [
+        {
+          "title": "15 ml",
+          "sku": "AH-SUFI-BLIS-ASCE-15ML",
+          "price": 60,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "15 ml",
+          "quantity": 100
+        },
+        {
+          "title": "30 ml",
+          "sku": "AH-SUFI-BLIS-ASCE-30ML",
+          "price": 115,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Oil_SufiBliss_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/sufi-bliss-ascension-oil/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Oil_SufiBlissAscensionOil_525x283.jpg",
+          "role": "Label",
+          "localPath": "public/images/ah/source/sufi-bliss-ascension-oil/02-label.jpg"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "lemurian-crystal-ormus"
+      ],
+      "cardImage": "/images/ah/products/sufi-bliss-ascension-oil.jpg"
+    },
+    {
+      "productId": "AH-009",
+      "handle": "anti-venom-balm",
+      "title": "Anti-Venom Balm",
+      "subtitle": "all natural poultice for spider bites, bee stings and skin toxins. also used as a facial mask.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-infection-healing"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/antivenombalm.htm",
+      "copy": {
+        "shortDescription": "All natural poultice for spider bites, bee stings and skin toxins. Also used as a facial mask.",
+        "fullDescription": "Our Brown Recluse spider bite remedy is made primarily from the high energy earth of ancient meteorites. An all natural poultice to help the body with spider bites, bee stings and skin toxins, full of toxin-absorbing ingredients such as bentonite clay and activated charcoal, plus oils and herbs that stimulate skin blood flow. Packed with herbal extracts that stimulate skin rejuvenation and regeneration. Can be used as a facial mask. The main ingredient is a fermented live clay from ancient volcanic sources, called ee-wah-kee or The Earth that Heals.",
+        "directions": "Apply as needed on skin lesions and cover with plastic wrap sealed with medical tape. If using with Triple Skin Oil, apply the oil first and let it absorb. Clean and re-apply at least twice a day.",
+        "ingredients": "Fermented live clay (bentonite, fulvic acid, humic acid, activated charcoal), oxygenated oils, bee propolis, marine phytoplankton. Frequencies: 7.83 Hz, 880 Hz, 30,008 Hz.",
+        "warnings": "Keep in a cool dark place such as a refrigerator. Do not freeze. It is a living balm and may create gas when first opened.",
+        "crossSellNames": "Triple Skin Oil; DermAlive Topical Probiotic; I Am Beautiful Oil; Electrical Neopulser"
+      },
+      "variants": [
+        {
+          "title": "50 ml (2 oz)",
+          "sku": "AH-ANTI-VENO-BALM-50ML2OZ",
+          "price": 75,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "50 ml / 2 oz",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Balm_Anti-Venom Balm 2oz 400x300 - new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/anti-venom-balm/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/antivenom-healing-balm-2oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/anti-venom-balm/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/AntiVenomHealingBalm_800x282.gif",
+          "role": "Label",
+          "localPath": "public/images/ah/source/anti-venom-balm/03-label.gif"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "triple-skin-oil",
+        "dermalive-topical-probiotic",
+        "electrical-neopulser"
+      ],
+      "cardImage": "/images/ah/products/anti-venom-balm.jpg"
+    },
+    {
+      "productId": "AH-010",
+      "handle": "electrical-neopulser",
+      "title": "Electrical Neopulser",
+      "subtitle": "device using a modified electrical pulse to inactivate venom from bites and stings. 9v powered.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-infection-healing"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/NeoPulser.htm",
+      "copy": {
+        "shortDescription": "Device using a modified electrical pulse to inactivate venom from bites and stings. 9V powered.",
+        "fullDescription": "The Electrical Neopulser is a device which uses a modified pulse to painlessly inactivate venom from bites and stings, and is programmed to help the body manage bacterial and viral infections. It combines electrical pulses from a 9V battery filtered through a built-in orgone generator, a rare earth magnet, and healing crystals such as amethyst embedded in the device. The result is a small pulse you can barely feel. We purchase the basic unit from a manufacturer and modify it with technology that pulses out proprietary harmonic healing frequencies.",
+        "directions": "Apply to affected area. Most effective when combined with topical or systemic products. Powered by a 9V battery.",
+        "ingredients": "Device: orgone generator, neodymium magnets, amethyst and other crystals, toroidal coil. Pulses ~18 Hz.",
+        "warnings": "Makes electrical health claims. Ensure FDA disclaimer carries over.",
+        "crossSellNames": "Anti-Venom Balm; Triple Skin Oil; ProAlive; Active Detox"
+      },
+      "variants": [
+        {
+          "title": "Device",
+          "sku": "AH-ELEC-NEOP-1UNIT",
+          "price": 340,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "1 unit",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Device_Neopulser vertical_400x300 - green.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/electrical-neopulser/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/Device_Neopulser inside look 400x350.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/electrical-neopulser/02-additional.jpg"
+        }
+      ],
+      "notes": [
+        "Brochure PDF: /skin-care/pdf/Neopulser.pdf"
+      ],
+      "crossSell": [
+        "anti-venom-balm",
+        "triple-skin-oil",
+        "combo-neopulser-proalive-activedetox",
+        "combo-neopulser-proalive-activedetox"
+      ],
+      "cardImage": "/images/ah/products/electrical-neopulser.jpg"
+    },
+    {
+      "productId": "AH-011",
+      "handle": "combo-antivenom-tripleskin",
+      "title": "Combo Set: Anti-Venom Balm + Triple Skin Oil",
+      "subtitle": "bundle of anti-venom balm and triple skin oil, used together for severe skin conditions.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-infection-healing"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/antivenombalm.htm",
+      "copy": {
+        "shortDescription": "Bundle of Anti-Venom Balm and Triple Skin Oil, used together for severe skin conditions.",
+        "fullDescription": "Anti-Venom Balm and Triple Skin Oil are very complementary. The Balm draws out impurities and the Oil calms irritated skin and assists regeneration. Recommended together for a severe spider bite, bee sting, snake bite or other irritated skin condition. Apply the Triple Skin Oil first, then the Anti-Venom Balm on top.",
+        "directions": "Apply Triple Skin Oil to the affected area first. When absorbed, apply Anti-Venom Balm on top.",
+        "ingredients": "See component products.",
+        "warnings": "",
+        "crossSellNames": "Anti-Venom Balm; Triple Skin Oil"
+      },
+      "variants": [
+        {
+          "title": "Balm 2 oz + Triple Skin Oil 15 ml",
+          "sku": "AH-COMB-ANTI-TRIP-SET",
+          "price": 135,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "Set",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/combo-antivenom--tripleskin-oil.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/combo-antivenom-tripleskin/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Out of stock at capture"
+      ],
+      "crossSell": [
+        "anti-venom-balm",
+        "triple-skin-oil"
+      ],
+      "cardImage": "/images/ah/products/combo-antivenom-tripleskin.jpg"
+    },
+    {
+      "productId": "AH-012",
+      "handle": "combo-neopulser-antivenom-tripleskin",
+      "title": "Combo Set: Neopulser with Anti-Venom Balm + Triple Skin Oil",
+      "subtitle": "neopulser device bundled with anti-venom balm and triple skin oil. for bites, stings and rashes.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "skin-infection-healing"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/NeoPulser.htm",
+      "copy": {
+        "shortDescription": "Neopulser device bundled with Anti-Venom Balm and Triple Skin Oil. For bites, stings and rashes.",
+        "fullDescription": "Designed to assist with spider bites, bee stings, rashes and other topical conditions. Includes a 2 oz jar of Anti-Venom Balm and a 15 ml bottle of Triple Skin Oil. The Neopulser works well by itself, and even better used with the skin regeneration products.",
+        "directions": "See component products.",
+        "ingredients": "See component products.",
+        "warnings": "",
+        "crossSellNames": "Electrical Neopulser; Anti-Venom Balm; Triple Skin Oil"
+      },
+      "variants": [
+        {
+          "title": "Neopulser + Balm 2 oz + Triple Skin Oil 15 ml",
+          "sku": "AH-COMB-NEOP-ANTI-SET",
+          "price": 475,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "Set",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Device_Neopulser Set Triple Skin Oil Antivenom Balm 185x150.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/combo-neopulser-antivenom-tripleskin/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Out of stock at capture"
+      ],
+      "crossSell": [
+        "electrical-neopulser",
+        "anti-venom-balm",
+        "triple-skin-oil"
+      ],
+      "cardImage": "/images/ah/products/combo-neopulser-antivenom-tripleskin.jpg"
+    },
+    {
+      "productId": "AH-013",
+      "handle": "combo-neopulser-proalive-activedetox",
+      "title": "Combo Set: Neopulser with 30ml ProAlive and Active Detox Probiotics",
+      "subtitle": "neopulser device bundled with 30 ml proalive and active detox liquid probiotics. for systemic viral conditions.",
+      "vendor": "Ascended Health",
+      "status": "draft",
+      "categories": [
+        "skin-infection-healing"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/skin-care/NeoPulser.htm",
+      "copy": {
+        "shortDescription": "Neopulser device bundled with 30 ml ProAlive and Active Detox liquid probiotics. For systemic viral conditions.",
+        "fullDescription": "Designed to assist with herpes, flu, cold and other systemic viral conditions. Includes one 30 ml ProAlive and one Active Detox liquid probiotic. Recommended combo pack for first time Neopulser users.",
+        "directions": "See component products.",
+        "ingredients": "See component products.",
+        "warnings": "",
+        "crossSellNames": "Electrical Neopulser; ProAlive; Active Detox"
+      },
+      "variants": [
+        {
+          "title": "Neopulser + ProAlive 30 ml + Active Detox",
+          "sku": "AH-COMB-NEOP-PROA-SET",
+          "price": 440,
+          "inStock": false,
+          "availability": "Unverified",
+          "size": "Set",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Device_Neopulser Set ProAlive Active Detox 185x150.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/combo-neopulser-proalive-activedetox/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Stock ambiguous across pages; verify before migration"
+      ],
+      "crossSell": [
+        "electrical-neopulser",
+        "proalive-probiotic",
+        "active-detox-probiotic"
+      ],
+      "cardImage": "/images/ah/products/combo-neopulser-proalive-activedetox.jpg"
+    },
+    {
+      "productId": "AH-014",
+      "handle": "euphoraprash",
+      "title": "Euphoraprash Lifeforce Supplement",
+      "subtitle": "vegan superfood paste based on the ayurvedic chyawanprash formula. a meal in one teaspoon.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "superfood-supplements"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/nutrigenomics/Euphoraprash.htm",
+      "copy": {
+        "shortDescription": "Vegan superfood paste based on the Ayurvedic Chyawanprash formula. A meal in one teaspoon.",
+        "fullDescription": "Our vegan superfood enhanced version of Chyawanprash. Super-charged with scalar healing vibrations and anti-aging foods, designed to help with weight loss, low libido and aging. It is a meal in one teaspoon, full of raw food nutrients and trace minerals, made with raw organic coconut, almonds and raw agave nectar. Contains marine phytoplankton and mangosteen. Vegan formula without ghee or honey. NOTE: full long-form page copy should be pulled from source HTML at migration.",
+        "directions": "Suggested dosage 1/2 teaspoon, 3 times a day.",
+        "ingredients": "Amla, Marine Phytoplankton, Mangosteen, Kaunch, Raw Organic Cacao, Coconut Sugar, Maca, Amazonian herbs, Blue Lotus, Cinnamon, Ashwagandha, Turmeric, Gold ormus, Lemurian Crystal.",
+        "warnings": "Contains almonds and coconut.",
+        "crossSellNames": "PhytoVelvet Elixir; Life Extension Elixir; Marine Phytoplankton"
+      },
+      "variants": [
+        {
+          "title": "4 oz super concentrate",
+          "sku": "AH-EUPH-4OZ",
+          "price": 60,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "4 oz",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/food_Euphoraprash_4oz_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/euphoraprash/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Out of stock at capture"
+      ],
+      "crossSell": [
+        "phytovelvet-elixir",
+        "life-extension-elixir",
+        "marine-phytoplankton"
+      ],
+      "cardImage": "/images/ah/products/euphoraprash.jpg"
+    },
+    {
+      "productId": "AH-015",
+      "handle": "phytovelvet-elixir",
+      "title": "PhytoVelvet Elixir (No. 1)",
+      "subtitle": "chocolate superfood elixir with marine phytoplankton and elk antler velvet. tastes like an almond joy.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "superfood-supplements"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/nutrigenomics/PhytoVelvet_01.htm",
+      "copy": {
+        "shortDescription": "Chocolate superfood elixir with Marine Phytoplankton and Elk Antler Velvet. Tastes like an almond joy.",
+        "fullDescription": "Ascended Health's energy producing natural food supplement containing the superfood Marine Phytoplankton and growth factor rich Elk Antler Velvet. A delicious chocolate supplement made with raw organic coconut, almonds and unprocessed honey, designed to help with low libido, weight loss and aging. Based on the ancient Ayurvedic Chyawanprash formula. NOTE: full long-form page copy should be pulled from source HTML at migration.",
+        "directions": "Take 1/2 teaspoon 3x a day. Swish in mouth and enjoy.",
+        "ingredients": "Marine Phytoplankton, Elk Antler Velvet, Chyawanprash, Mangosteen, Kaunch, Blue Lotus, Oxygen, Lemurian Crystal Ormus.",
+        "warnings": "Contains honey (not vegan), cacao, almonds, coconut.",
+        "crossSellNames": "Euphoraprash; Life Extension Elixir; Marine Phytoplankton"
+      },
+      "variants": [
+        {
+          "title": "4 oz super concentrate",
+          "sku": "AH-PHYT-ELIX-4OZ",
+          "price": 65,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "4 oz",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/food_PhytoVelvet_4oz_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/phytovelvet-elixir/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Out of stock at capture. Index name PhytoVelvet No. 1; page title Phytovelvet Elixir"
+      ],
+      "crossSell": [
+        "euphoraprash",
+        "life-extension-elixir",
+        "marine-phytoplankton"
+      ],
+      "cardImage": "/images/ah/products/phytovelvet-elixir.jpg"
+    },
+    {
+      "productId": "AH-016",
+      "handle": "life-extension-elixir",
+      "title": "Life Extension Elixir",
+      "subtitle": "highest potency elixir with 10x herbal extracts and fermented marine phytoplankton. no elk antler velvet.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "superfood-supplements"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/nutrigenomics/LifeExtensionElixir.htm",
+      "copy": {
+        "shortDescription": "Highest potency elixir with 10x herbal extracts and fermented marine phytoplankton. No Elk Antler Velvet.",
+        "fullDescription": "Ascended Health's Life Extension Elixir contains compounds with immune-boosting properties. Similar to PhytoVelvet but with ten times the potent herbal extracts, minus the Elk Antler Velvet, plus fermented marine phytoplankton. Features polyatomic oxygen in ten forms (O2 through O10). Marketed for energy, chronic fatigue, arthritis and Parkinson's support. NOTE: full long-form page copy should be pulled from source HTML at migration.",
+        "directions": "1/4 teaspoon 1-3 times a day. Swish in your mouth before swallowing.",
+        "ingredients": "Fermented Marine Phytoplankton, Chyawanprash, Kaunch, Oxygen (polyatomic), Lemurian Crystal Ormus.",
+        "warnings": "",
+        "crossSellNames": "Euphoraprash; PhytoVelvet Elixir; Marine Phytoplankton"
+      },
+      "variants": [
+        {
+          "title": "4 oz super concentrate",
+          "sku": "AH-LIFE-EXTE-ELIX-4OZ",
+          "price": 150,
+          "inStock": false,
+          "availability": "Out of stock",
+          "size": "4 oz",
+          "quantity": 0
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/Food_LifeExtension_4oz_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/life-extension-elixir/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/life-ext-elixir.png",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/life-extension-elixir/02-additional.png"
+        }
+      ],
+      "notes": [
+        "Out of stock at capture"
+      ],
+      "crossSell": [
+        "euphoraprash",
+        "phytovelvet-elixir",
+        "marine-phytoplankton"
+      ],
+      "cardImage": "/images/ah/products/life-extension-elixir.jpg"
+    },
+    {
+      "productId": "AH-017",
+      "handle": "marine-phytoplankton",
+      "title": "Marine Phytoplankton (supercharged)",
+      "subtitle": "freeze-dried pure powder marine phytoplankton, certified free of heavy metals. world's most powerful superfood.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "superfood-supplements"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/nutrigenomics/phytoplankton/",
+      "copy": {
+        "shortDescription": "Freeze-dried pure powder marine phytoplankton, certified free of heavy metals. World's most powerful superfood.",
+        "fullDescription": "Marine phytoplankton is the primordial building block of life on earth. Widely acclaimed as the world's most powerful superfood, it contains almost every single trace mineral and nutrient lacking in our body due to depleted soil. Certified free of heavy metals or fillers, sourced from a Dutch university aqua farm in Holland, grown to single strain aseptic standards. Freeze-dried and sold in pure powder form, not capsules.",
+        "directions": "Mix with water or fresh juice. Suggested dosage 1/4 tsp daily, increase gradually to 1/2 tsp.",
+        "ingredients": "100% freeze-dried marine phytoplankton powder.",
+        "warnings": "",
+        "crossSellNames": "Euphoraprash; PhytoVelvet Elixir; Life Extension Elixir"
+      },
+      "variants": [
+        {
+          "title": "50 g powder (2 week supply)",
+          "sku": "AH-MARI-PHYT-50G",
+          "price": 168,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "50 g",
+          "quantity": 100
+        },
+        {
+          "title": "100 g powder (1 month supply)",
+          "sku": "AH-MARI-PHYT-100G",
+          "price": 300,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "100 g",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/phytoplankton_new.png",
+          "role": "Main",
+          "localPath": "public/images/ah/source/marine-phytoplankton/01-main.png"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/phytoplancton-50g.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/marine-phytoplankton/02-additional.jpg"
+        }
+      ],
+      "notes": [
+        "USPS priority shipping included in USA"
+      ],
+      "crossSell": [
+        "euphoraprash",
+        "phytovelvet-elixir",
+        "life-extension-elixir"
+      ],
+      "cardImage": "/images/ah/products/marine-phytoplankton.png"
+    },
+    {
+      "productId": "AH-018",
+      "handle": "prana-longevity-powder",
+      "title": "Prana Longevity Powder (PLP)",
+      "subtitle": "nutritional supplement focused on activating growth hormone pathways. high in elk antler velvet.",
+      "vendor": "Ascended Health",
+      "status": "draft",
+      "categories": [
+        "longevity"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/products_Longevity.htm",
+      "copy": {
+        "shortDescription": "Nutritional supplement focused on activating Growth Hormone pathways. High in Elk Antler Velvet.",
+        "fullDescription": "Prana Longevity Powder (PLP) is a powerful nutritional supplement that focuses on activating the Growth Hormone (GH) pathways of the body. It has high amounts of Elk Antler Velvet and contains many supplements that create the conditions for the body to increase the rate of GH release, plus herbs designed to increase endurance by stimulating muscle growth and reducing stress. Because GH is produced during delta stage sleep, it is recommended that PLP be taken before sleep.",
+        "directions": "Take before sleep to capitalize on delta stage GH release.",
+        "ingredients": "High Elk Antler Velvet plus GH-pathway herbs. No detailed ingredient panel published.",
+        "warnings": "",
+        "crossSellNames": ""
+      },
+      "variants": [
+        {
+          "title": "4 oz",
+          "sku": "AH-PRAN-LONG-POWD-4OZ",
+          "price": 300,
+          "inStock": false,
+          "availability": "Unverified",
+          "size": "4 oz",
+          "quantity": 0
+        }
+      ],
+      "images": [],
+      "notes": [
+        "Add-to-cart is a non-functional placeholder; no product image; page appears incomplete. Verify price, stock and image with owner."
+      ],
+      "crossSell": []
+    },
+    {
+      "productId": "AH-019",
+      "handle": "active-detox-probiotic",
+      "title": "Active Detox Probiotic",
+      "subtitle": "liquid probiotic with live microbes, chelators and trace minerals to support liver and kidney detox.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "liquid-probiotics"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/probiotics/Probiotic_ActiveDetox.htm",
+      "copy": {
+        "shortDescription": "Liquid probiotic with live microbes, chelators and trace minerals to support liver and kidney detox.",
+        "fullDescription": "Formulated with special live microbes, chelators, and over 60 trace minerals to assist in liver and kidney detoxification, designed to mobilize toxins in deeper tissues. Microbes seek out toxins as nutrients and actively break them down. Benefits noted: recover from chronic fatigue, weight optimization, lift depression, support liver and kidney detox. Excellent formula for dogs and cats.",
+        "directions": "Take 1-2 drops before bedtime, directly in the mouth or in water. Increase gradually. For pets add 1-2 drops to water dish.",
+        "ingredients": "Live microbes, chelators, 60+ trace minerals, humates. Ingredient panel shown only as a label image on the page.",
+        "warnings": "Experiencing flu-like response is common. Refrigeration recommended to extend shelf life beyond four months.",
+        "crossSellNames": "ProAlive Probiotic; Active Detox & ProAlive set"
+      },
+      "variants": [
+        {
+          "title": "30 ml (lasts 1 month)",
+          "sku": "AH-ACTI-DETO-PROB-30ML",
+          "price": 60,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/ActiveDetox_Probiotic_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/active-detox-probiotic/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/active-detox-probiotic-15ml.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/active-detox-probiotic/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Probiotic_ActiveDetox_525x300_30ml.jpg",
+          "role": "Label",
+          "localPath": "public/images/ah/source/active-detox-probiotic/03-label.jpg"
+        }
+      ],
+      "notes": [
+        "HQ image filename says 15ml; verify fill volume"
+      ],
+      "crossSell": [
+        "proalive-probiotic"
+      ],
+      "cardImage": "/images/ah/products/active-detox-probiotic.jpg"
+    },
+    {
+      "productId": "AH-020",
+      "handle": "proalive-probiotic",
+      "title": "ProAlive Probiotic",
+      "subtitle": "live ancient probiotics from longevity zones. safe for children and pets.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "liquid-probiotics"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/probiotics/Probiotic_Proalive.htm",
+      "copy": {
+        "shortDescription": "Live ancient probiotics from longevity zones. Safe for children and pets.",
+        "fullDescription": "Made of live ancient probiotics from longevity zones around the world, designed to help the body restore a harmonic microflora bioterrain and support rebalancing of bacterial and viral infections. Contains beneficial flora with a high concentration of bacterial byproducts including B vitamins, enzymes, bacteriocins and fungal inhibitors. Safe for children and pets.",
+        "directions": "Start with 1-5 drops per day in water. Swish first, then swallow. Build up to a comfortable amount.",
+        "ingredients": "20 strains listed on page including L. acidophilus, L. casei, L. rhamnosus, L. salivarius, L. plantarum, L. fermentum ME-3, B. bifidum, B. longum, S. boulardii and others. Note: bundle page shows a shorter conflicting list; verify against label.",
+        "warnings": "Possible initial cleansing responses (headache, sluggishness). No known side effects.",
+        "crossSellNames": "Active Detox Probiotic; Active Detox & ProAlive set"
+      },
+      "variants": [
+        {
+          "title": "30 ml (lasts 1 month)",
+          "sku": "AH-PROA-PROB-30ML",
+          "price": 60,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "30 ml",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/ProAlive_Probiotic_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/proalive-probiotic/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/proalive-probiotic-1oz.jpg",
+          "role": "Additional",
+          "localPath": "public/images/ah/source/proalive-probiotic/02-additional.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/Probiotic_ProAlive_525x300.jpg",
+          "role": "Label",
+          "localPath": "public/images/ah/source/proalive-probiotic/03-label.jpg"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "combo-neopulser-proalive-activedetox"
+      ],
+      "cardImage": "/images/ah/products/proalive-probiotic.jpg"
+    },
+    {
+      "productId": "AH-021",
+      "handle": "active-detox-proalive-set",
+      "title": "Active Detox & ProAlive Probiotic Set",
+      "subtitle": "buy-both set of the two liquid probiotics. proalive in the morning, active detox before bed.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "liquid-probiotics"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/nutrigenomics/Probiotics.htm",
+      "copy": {
+        "shortDescription": "Buy-both set of the two liquid probiotics. ProAlive in the morning, Active Detox before bed.",
+        "fullDescription": "Probiotics work synergistically together. Take ProAlive in the morning and Active Detox before bedtime. This is the buy both and save set (115.00 versus 120.00 bought separately). Also appears as Live Probiotic Set on the Liquid Probiotics category page.",
+        "directions": "ProAlive in the morning, Active Detox before bedtime.",
+        "ingredients": "See component products.",
+        "warnings": "",
+        "crossSellNames": "Active Detox Probiotic; ProAlive Probiotic"
+      },
+      "variants": [
+        {
+          "title": "2-bottle set, 30 ml each",
+          "sku": "AH-ACTI-DETO-PROA-SET",
+          "price": 115,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "Set",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/probiotic_set_ActiveDetox_ProAlive_400x300-new.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/active-detox-proalive-set/01-main.jpg"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "combo-neopulser-proalive-activedetox",
+        "proalive-probiotic"
+      ],
+      "cardImage": "/images/ah/products/active-detox-proalive-set.jpg"
+    },
+    {
+      "productId": "AH-022",
+      "handle": "lemurian-crystal-ormus",
+      "title": "Lemurian Crystal ORMUS",
+      "subtitle": "pure ground crystal powder with natural ormus. sublingual or mixed in water.",
+      "vendor": "Ascended Health",
+      "status": "published",
+      "categories": [
+        "energetic-consciousness"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/ormus/index_ormus.htm",
+      "copy": {
+        "shortDescription": "Pure ground crystal powder with natural ORMUS. Sublingual or mixed in water.",
+        "fullDescription": "This pure ground powder of quartz, tourmaline, onyx, agate and moldovite crystals contains nano amounts of gold, silver, iridium, palladium, platinum and rhodium, completely natural ORMUS in its original state. Not processed using lye or any chemicals. The crystals are found in an ancient meteorite bed thought to be over 1.6 billion years old. Studies point to ORMUS' ability to increase the capacity for each cell to conduct electrical impulses.",
+        "directions": "Place a pinch of dried powder under the tongue or mix with water and drink the milky effluent.",
+        "ingredients": "Ground quartz, tourmaline, onyx, agate, moldovite crystals with trace precious metals.",
+        "warnings": "",
+        "crossSellNames": "Sufi Bliss Ascension Oil; Energetic Consciousness line"
+      },
+      "variants": [
+        {
+          "title": "50 g powder",
+          "sku": "AH-LEMU-CRYS-ORMU-50G",
+          "price": 80,
+          "inStock": true,
+          "availability": "In stock",
+          "size": "50 g",
+          "quantity": 100
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/HQ/lemurian-crystal-ormus-50g.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/lemurian-crystal-ormus/01-main.jpg"
+        },
+        {
+          "url": "https://ascendedhealth.com/img/products/_labels/LemurianCrystalOrmus_800x282.jpg",
+          "role": "Label",
+          "localPath": "public/images/ah/source/lemurian-crystal-ormus/02-label.jpg"
+        }
+      ],
+      "notes": [],
+      "crossSell": [
+        "sufi-bliss-ascension-oil"
+      ],
+      "cardImage": "/images/ah/products/lemurian-crystal-ormus.jpg"
+    },
+    {
+      "productId": "AH-023",
+      "handle": "this-cheese-is-nuts",
+      "title": "This Cheese is Nuts (Book)",
+      "subtitle": "cookbook by julie piatt with 75 recipes for dairy-free nut cheeses. 208 pages.",
+      "vendor": "Julie Piatt (book)",
+      "status": "published",
+      "categories": [
+        "ah-cafe"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/ThisCheeseIsNuts.htm",
+      "copy": {
+        "shortDescription": "Cookbook by Julie Piatt with 75 recipes for dairy-free nut cheeses. 208 pages.",
+        "fullDescription": "Julie Piatt shares seventy-five recipes using almonds, cashews and other nuts to create cheeses anyone can make right at home. 208 pages.",
+        "directions": "",
+        "ingredients": "",
+        "warnings": "",
+        "crossSellNames": "AH Cafe line"
+      },
+      "variants": [
+        {
+          "title": "208 pages",
+          "sku": "AH-THIS-CHEE-IS-BOOK",
+          "price": 25,
+          "inStock": true,
+          "availability": "Not stated",
+          "size": "Book",
+          "quantity": 25
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/cover.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/this-cheese-is-nuts/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Stock not stated on page"
+      ],
+      "crossSell": [],
+      "cardImage": "/images/ah/products/this-cheese-is-nuts.jpg"
+    },
+    {
+      "productId": "AH-024",
+      "handle": "organic-chickpea-miso",
+      "title": "Organic Chickpea Miso",
+      "subtitle": "soy-free, gluten-free miso made with chickpeas instead of soybeans. 16 oz jar.",
+      "vendor": "AH Cafe",
+      "status": "published",
+      "categories": [
+        "ah-cafe"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/4-Chickpea-Miso.htm",
+      "copy": {
+        "shortDescription": "Soy-free, gluten-free miso made with chickpeas instead of soybeans. 16 oz jar.",
+        "fullDescription": "Made with the sumptuous chickpea instead of soybeans, this variety has long been a family favorite. A staple of Middle Eastern cuisine since ancient times, the chickpea is one of the most easily digestible beans. No gluten, no soy.",
+        "directions": "",
+        "ingredients": "Deep well water, lightly polished organic brown rice, organic chickpeas, sun-dried sea salt, organic sea vegetables, koji culture.",
+        "warnings": "",
+        "crossSellNames": "AH Cafe line"
+      },
+      "variants": [
+        {
+          "title": "16 oz Jar",
+          "sku": "AH-ORGA-CHIC-MISO-16OZ",
+          "price": 20,
+          "inStock": true,
+          "availability": "Not stated",
+          "size": "16 oz",
+          "quantity": 25
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/CP.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/organic-chickpea-miso/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Stock not stated on page"
+      ],
+      "crossSell": [],
+      "cardImage": "/images/ah/products/organic-chickpea-miso.jpg"
+    },
+    {
+      "productId": "AH-025",
+      "handle": "noni-fruit-leather",
+      "title": "Noni Fruit Leather",
+      "subtitle": "organic noni fruit leather, 14x more potent than noni juice. 2 oz.",
+      "vendor": "AH Cafe",
+      "status": "published",
+      "categories": [
+        "ah-cafe"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/Noni-Fruit-Leather.htm",
+      "copy": {
+        "shortDescription": "Organic noni fruit leather, 14x more potent than noni juice. 2 oz.",
+        "fullDescription": "Organic Noni Fruit Leather with 165 beneficial compounds, used to help support overall health, wellness and energy. 14x more potent than noni juice, low heat processed from non-fermented noni pulp, provides natural antioxidant protection against free radical damage.",
+        "directions": "",
+        "ingredients": "Organic noni fruit pulp.",
+        "warnings": "",
+        "crossSellNames": "AH Cafe line"
+      },
+      "variants": [
+        {
+          "title": "2 oz",
+          "sku": "AH-NONI-FRUI-LEAT-2OZ",
+          "price": 36,
+          "inStock": true,
+          "availability": "Not stated",
+          "size": "2 oz",
+          "quantity": 25
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/noni-fruit-leather.jpg",
+          "role": "Main",
+          "localPath": "public/images/ah/source/noni-fruit-leather/01-main.jpg"
+        }
+      ],
+      "notes": [
+        "Stock not stated on page"
+      ],
+      "crossSell": [],
+      "cardImage": "/images/ah/products/noni-fruit-leather.jpg"
+    },
+    {
+      "productId": "AH-026",
+      "handle": "kalahari-mustard-seed-beauty-bath",
+      "title": "Kalahari Mustard Seed Beauty Bath",
+      "subtitle": "mineral bath powder with kalahari salts and ground mustard seed. 8 oz, 4-5 baths.",
+      "vendor": "AH Cafe",
+      "status": "published",
+      "categories": [
+        "ah-cafe"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/kalahari-mustard-seed-beauty-bath.htm",
+      "copy": {
+        "shortDescription": "Mineral bath powder with Kalahari salts and ground mustard seed. 8 oz, 4-5 baths.",
+        "fullDescription": "Formulated to relieve stress and tension, relieve muscle aches and joint discomfort, and accelerate the body's natural healing process. Contains Kalahari mineral salts, ground mustard seed for circulation, and eucalyptus, camphor and wintergreen. Powder form in a compostable kraft pouch. Manufactured in South Africa, packaged in the U.S. Contains 4-5 baths per package.",
+        "directions": "2-3 tablespoons per bath, or 1 tablespoon for foot baths.",
+        "ingredients": "Kalahari mineral salts, ground mustard seed, eucalyptus, camphor, wintergreen.",
+        "warnings": "",
+        "crossSellNames": "AH Cafe line"
+      },
+      "variants": [
+        {
+          "title": "8 oz",
+          "sku": "AH-KALA-MUST-SEED-8OZ",
+          "price": 45,
+          "inStock": true,
+          "availability": "Not stated",
+          "size": "8 oz",
+          "quantity": 25
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/kalahari-mustard-new.png",
+          "role": "Main",
+          "localPath": "public/images/ah/source/kalahari-mustard-seed-beauty-bath/01-main.png"
+        }
+      ],
+      "notes": [
+        "Stock not stated on page"
+      ],
+      "crossSell": [],
+      "cardImage": "/images/ah/products/kalahari-mustard-seed-beauty-bath.png"
+    },
+    {
+      "productId": "AH-027",
+      "handle": "auracle-healing-cards",
+      "title": "The Auracle Healing Cards: Complete Book & Card Set",
+      "subtitle": "56-card healing deck with 112 images plus a 159-page guidebook.",
+      "vendor": "AH Cafe",
+      "status": "published",
+      "categories": [
+        "ah-cafe"
+      ],
+      "sourceUrl": "https://ascendedhealth.com/the-auracle-healing-cards.htm",
+      "copy": {
+        "shortDescription": "56-card healing deck with 112 images plus a 159-page guidebook.",
+        "fullDescription": "The deck includes 56 cards (4 x 6 inches) with 112 healing images and mandalas on both sides, plus a 159-page guidebook (6 x 8 inches). Designed to open the heart to insights and assist with emotional balance, peacefulness and serenity, grounding visions and awakening intuition.",
+        "directions": "",
+        "ingredients": "",
+        "warnings": "",
+        "crossSellNames": "AH Cafe line"
+      },
+      "variants": [
+        {
+          "title": "Book & Card Set",
+          "sku": "AH-AURA-HEAL-CARD-1LB3X10X10",
+          "price": 135,
+          "inStock": true,
+          "availability": "Not stated",
+          "size": "1 lb, 3 x 10 x 10 in",
+          "quantity": 25
+        }
+      ],
+      "images": [
+        {
+          "url": "https://ascendedhealth.com/img/products/The_Auracle_Healing_Cards.png",
+          "role": "Main",
+          "localPath": "public/images/ah/source/auracle-healing-cards/01-main.png"
+        }
+      ],
+      "notes": [
+        "Stock not stated on page"
+      ],
+      "crossSell": [],
+      "cardImage": "/images/ah/products/auracle-healing-cards.png"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/gum-disease/gum_disease_remedy.htm",
+      "destination": "/products/regular-strength-oralive",
+      "permanent": true
+    },
+    {
+      "source": "/gum-disease/unsweetened_oralive.htm",
+      "destination": "/products/unsweetened-oralive",
+      "permanent": true
+    },
+    {
+      "source": "/gum-disease/gum_disease_remedy_oil.htm",
+      "destination": "/products/super-gum-oil",
+      "permanent": true
+    },
+    {
+      "source": "/gum-disease/gum_disease_remedy_xs.htm",
+      "destination": "/products/extra-strength-oralive",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/oil_iambeautiful.htm",
+      "destination": "/products/i-am-beautiful-oil",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/oil_TripleSkin.htm",
+      "destination": "/products/triple-skin-oil",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/oil_TripleSkin_SkinInfection.htm",
+      "destination": "/products/triple-skin-oil",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/Probiotic_DermAliveSpray.htm",
+      "destination": "/products/dermalive-topical-probiotic",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/oil_SufiBlissAscension.htm",
+      "destination": "/products/sufi-bliss-ascension-oil",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/antivenombalm.htm",
+      "destination": "/products/anti-venom-balm",
+      "permanent": true
+    },
+    {
+      "source": "/skin-care/NeoPulser.htm",
+      "destination": "/products/electrical-neopulser",
+      "permanent": true
+    },
+    {
+      "source": "/nutrigenomics/Euphoraprash.htm",
+      "destination": "/products/euphoraprash",
+      "permanent": true
+    },
+    {
+      "source": "/nutrigenomics/PhytoVelvet_01.htm",
+      "destination": "/products/phytovelvet-elixir",
+      "permanent": true
+    },
+    {
+      "source": "/nutrigenomics/LifeExtensionElixir.htm",
+      "destination": "/products/life-extension-elixir",
+      "permanent": true
+    },
+    {
+      "source": "/nutrigenomics/phytoplankton/",
+      "destination": "/products/marine-phytoplankton",
+      "permanent": true
+    },
+    {
+      "source": "/nutrigenomics/Probiotics.htm",
+      "destination": "/products/active-detox-proalive-set",
+      "permanent": true
+    },
+    {
+      "source": "/ormus/index_ormus.htm",
+      "destination": "/products/lemurian-crystal-ormus",
+      "permanent": true
+    },
+    {
+      "source": "/probiotics/Probiotic_ActiveDetox.htm",
+      "destination": "/products/active-detox-probiotic",
+      "permanent": true
+    },
+    {
+      "source": "/probiotics/Probiotic_Proalive.htm",
+      "destination": "/products/proalive-probiotic",
+      "permanent": true
+    },
+    {
+      "source": "/products_Longevity.htm",
+      "destination": "/categories/longevity",
+      "permanent": true
+    },
+    {
+      "source": "/gum-disease/",
+      "destination": "/categories/dental-gum-care",
+      "permanent": true
+    },
+    {
+      "source": "/products_SkinRegeneration.htm",
+      "destination": "/categories/skin-regeneration",
+      "permanent": true
+    },
+    {
+      "source": "/products_SkinInfection.htm",
+      "destination": "/categories/skin-regeneration",
+      "permanent": true
+    },
+    {
+      "source": "/products_ProbioticSuperfood.htm",
+      "destination": "/categories/superfood-supplements",
+      "permanent": true
+    },
+    {
+      "source": "/products_LiquidProbiotics.htm",
+      "destination": "/categories/liquid-probiotics",
+      "permanent": true
+    },
+    {
+      "source": "/products_energic.htm",
+      "destination": "/categories/energetic-consciousness",
+      "permanent": true
+    },
+    {
+      "source": "/AHCafe.htm",
+      "destination": "/categories/ah-cafe",
+      "permanent": true
+    },
+    {
+      "source": "/ConditionsOfUse.htm",
+      "destination": "/policies",
+      "permanent": true
+    }
+  ]
+}
