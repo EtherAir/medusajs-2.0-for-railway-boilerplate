@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 
-import { HOME_BLOG_CARDS, REVIEWS } from "@lib/content/home"
+import { HOME_BLOG_CARDS, REVIEWS as FALLBACK_REVIEWS } from "@lib/content/home"
 import { AhRule } from "@modules/common/components/ah"
 import CarouselNav from "@modules/common/components/ah/carousel-nav"
 import StarRating from "@modules/common/components/ah/star-rating"
@@ -13,7 +13,19 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
  * Reviews carousel ("Look inside the vibrant life.") beside two journal
  * cards. One review shown at a time, arrows + dots beneath.
  */
-export default function ReviewsAndBlog() {
+type Review = {
+  author: string
+  date?: string | null
+  rating?: number | null
+  body: string
+}
+
+export default function ReviewsAndBlog({
+  reviews,
+}: {
+  reviews?: Review[]
+}) {
+  const REVIEWS = reviews?.length ? reviews : FALLBACK_REVIEWS
   const [i, setI] = useState(0)
   const r = REVIEWS[i]
 
@@ -31,7 +43,7 @@ export default function ReviewsAndBlog() {
               <span className="text-p2 uppercase leading-none">
                 {r.author}, {r.date}
               </span>
-              <StarRating value={r.rating} />
+              <StarRating value={r.rating ?? 5} />
             </div>
             <p className="text-p2 mt-4 m-0">{r.body}</p>
           </div>

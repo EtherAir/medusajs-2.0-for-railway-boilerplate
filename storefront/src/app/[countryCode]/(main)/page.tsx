@@ -6,6 +6,7 @@ import {
   HOME_STATEMENT,
 } from "@lib/content/home"
 import { AhReveal } from "@modules/common/components/ah"
+import { getReviews } from "@lib/data/payload"
 import CategoryIndex from "@modules/home/components/category-index"
 import FeatureTiles from "@modules/home/components/feature-tiles"
 import Founder from "@modules/home/components/founder"
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
+  const reviews = await getReviews()
+
   return (
     <>
       <Hero
@@ -52,7 +55,7 @@ export default async function Home() {
 
       <ProductRow />
 
-      <ReviewsAndBlog />
+      <ReviewsAndBlog reviews={reviews} />
 
       <div className="mt-v111 small:mt-[145px]">
         <Hero

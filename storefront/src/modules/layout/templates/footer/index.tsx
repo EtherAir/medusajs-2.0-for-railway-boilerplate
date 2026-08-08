@@ -1,10 +1,7 @@
 import Image from "next/image"
 
-import {
-  AH_CATEGORIES,
-  AH_COMMUNITY_LINE,
-  AH_FOOTER_LINKS,
-} from "@lib/constants/ah"
+import { AH_CATEGORIES, AH_FOOTER_LINKS } from "@lib/constants/ah"
+import { getSiteSettings } from "@lib/data/payload"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import InlineSubmitField from "@modules/common/components/ah/inline-submit-field"
 import { Submark } from "@modules/layout/components/logo"
@@ -14,12 +11,13 @@ import { Submark } from "@modules/layout/components/logo"
  * row across the right, the Shop category list and the utility column
  * beneath it, submark bottom-right; copyright and credit on the last line.
  */
-export default function Footer() {
+export default async function Footer() {
+  const { communityLine } = await getSiteSettings()
   return (
     <footer className="bg-ah-page pt-v82 pb-v42 px-gutter">
       <div className="grid grid-cols-1 small:grid-cols-[380px_1fr] gap-14 small:gap-[clamp(60px,13.7vw,197px)]">
         <div>
-          <div className="text-p1 whitespace-pre-line">{AH_COMMUNITY_LINE}</div>
+          <div className="text-p1 whitespace-pre-line">{communityLine}</div>
           <div className="relative w-full max-w-[380px] h-[376px] mt-[29px]">
             <Image
               src="/images/ah/imagery/community-water.jpg"

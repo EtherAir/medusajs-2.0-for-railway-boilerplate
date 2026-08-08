@@ -3,7 +3,6 @@
 import { ReactNode, useState } from "react"
 import { usePathname } from "next/navigation"
 
-import { AH_ANNOUNCEMENT } from "@lib/constants/ah"
 import { cx } from "@modules/common/components/ah"
 import AnnouncementBar from "@modules/layout/components/announcement-bar"
 import MegaMenu from "@modules/layout/components/mega-menu"
@@ -22,9 +21,11 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 export default function HeaderFrame({
   cartButton,
   mobileMenu,
+  announcement,
 }: {
   cartButton: ReactNode
   mobileMenu: ReactNode
+  announcement: string
 }) {
   const pathname = usePathname()
   const [shopOpen, setShopOpen] = useState(false)
@@ -45,7 +46,7 @@ export default function HeaderFrame({
       )}
     >
       <AnnouncementBar tone={white ? "white" : "seafoam"}>
-        {AH_ANNOUNCEMENT}
+        {announcement}
       </AnnouncementBar>
 
       <header
