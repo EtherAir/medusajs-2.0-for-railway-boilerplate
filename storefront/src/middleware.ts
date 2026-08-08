@@ -85,60 +85,80 @@ async function getCountryCode(
 }
 
 /**
- * Middleware to handle region selection and onboarding status.
+ * Region routing:
+ * - The default country (NEXT_PUBLIC_DEFAULT_REGION) lives at clean,
+ *   unprefixed URLs: /shop. Requests are invisibly rewritten to
+ *   /{default}/... internally, and any explicit /{default}/... URL 301s
+ *   to its clean form (one canonical URL per page).
+ * - Every other configured country keeps its prefix: /de/shop.
+ * - cart_id / onboarding query params still set their cookies and bounce
+ *   into checkout exactly as before.
  */
 export async function middleware(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
   const isOnboarding = searchParams.get("onboarding") === "true"
   const cartId = searchParams.get("cart_id")
   const checkoutStep = searchParams.get("step")
-  const onboardingCookie = request.cookies.get("_medusa_onboarding")
   const cartIdCookie = request.cookies.get("_medusa_cart_id")
 
   const regionMap = await getRegionMap()
+  const pathname = request.nextUrl.pathname
+  const urlSeg = pathname.split("/")[1]?.toLowerCase()
+  const urlHasCountryCode = !!urlSeg && regionMap.has(urlSeg)
 
+  const withParamCookies = (response: NextResponse) => {
+    if (cartId && !cartIdCookie) {
+      response.cookies.set("_medusa_cart_id", cartId, { maxAge: 60 * 60 * 24 })
+    }
+    if (isOnboarding) {
+      response.cookies.set("_medusa_onboarding", "true", { maxAge: 60 * 60 * 24 })
+    }
+    return response
+  }
+
+  // Explicit default-country prefix → 301 to the canonical clean URL.
+  if (urlHasCountryCode && urlSeg === DEFAULT_REGION) {
+    const url = request.nextUrl.clone()
+    url.pathname = pathname.slice(urlSeg.length + 1) || "/"
+    if (cartId && !checkoutStep) url.searchParams.set("step", "address")
+    return withParamCookies(NextResponse.redirect(url, 301))
+  }
+
+  // Non-default country prefix → serve as-is.
+  if (urlHasCountryCode) {
+    if (cartId && !checkoutStep) {
+      const url = request.nextUrl.clone()
+      url.searchParams.set("step", "address")
+      return withParamCookies(NextResponse.redirect(url, 307))
+    }
+    return withParamCookies(NextResponse.next())
+  }
+
+  // Unprefixed URL: resolve the visitor's country.
   const countryCode = regionMap && (await getCountryCode(request, regionMap))
-
-  const urlHasCountryCode =
-    countryCode && request.nextUrl.pathname.split("/")[1].includes(countryCode)
-
-  // check if one of the country codes is in the url
-  if (
-    urlHasCountryCode &&
-    (!isOnboarding || onboardingCookie) &&
-    (!cartId || cartIdCookie)
-  ) {
+  if (!countryCode) {
     return NextResponse.next()
   }
 
-  const redirectPath =
-    request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
-
-  const queryString = request.nextUrl.search ? request.nextUrl.search : ""
-
-  let redirectUrl = request.nextUrl.href
-
-  let response = NextResponse.redirect(redirectUrl, 307)
-
-  // If no country code is set, we redirect to the relevant region.
-  if (!urlHasCountryCode && countryCode) {
-    redirectUrl = `${request.nextUrl.origin}/${countryCode}${redirectPath}${queryString}`
-    response = NextResponse.redirect(`${redirectUrl}`, 307)
-  }
-
-  // If a cart_id is in the params, we set it as a cookie and redirect to the address step.
   if (cartId && !checkoutStep) {
-    redirectUrl = `${redirectUrl}&step=address`
-    response = NextResponse.redirect(`${redirectUrl}`, 307)
-    response.cookies.set("_medusa_cart_id", cartId, { maxAge: 60 * 60 * 24 })
+    const url = request.nextUrl.clone()
+    if (countryCode !== DEFAULT_REGION) {
+      url.pathname = `/${countryCode}${pathname === "/" ? "" : pathname}`
+    }
+    url.searchParams.set("step", "address")
+    return withParamCookies(NextResponse.redirect(url, 307))
   }
 
-  // Set a cookie to indicate that we're onboarding. This is used to show the onboarding flow.
-  if (isOnboarding) {
-    response.cookies.set("_medusa_onboarding", "true", { maxAge: 60 * 60 * 24 })
+  const url = request.nextUrl.clone()
+  url.pathname = `/${countryCode}${pathname === "/" ? "" : pathname}`
+
+  if (countryCode === DEFAULT_REGION) {
+    // Invisible rewrite: browser keeps the clean URL.
+    return withParamCookies(NextResponse.rewrite(url))
   }
 
-  return response
+  // Geo-detected non-default country → prefixed redirect.
+  return withParamCookies(NextResponse.redirect(url, 307))
 }
 
 export const config = {

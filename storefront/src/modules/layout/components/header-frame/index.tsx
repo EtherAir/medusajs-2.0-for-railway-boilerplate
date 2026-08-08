@@ -30,7 +30,7 @@ export default function HeaderFrame({
   const pathname = usePathname()
   const [shopOpen, setShopOpen] = useState(false)
   // home is /{countryCode} exactly — header overlays the hero there
-  const overHero = /^\/[a-z]{2}$/.test(pathname)
+  const overHero = pathname === "/" || /^\/[a-z]{2}$/.test(pathname)
   const white = overHero && !shopOpen
 
   const navLink = cx(

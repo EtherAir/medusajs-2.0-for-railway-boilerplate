@@ -10,6 +10,7 @@ import { deleteLineItem, updateLineItem } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 import { AhButton } from "@modules/common/components/ah"
 import LineItemPrice from "@modules/common/components/line-item-price"
+import { countryPath } from "@lib/util/country-path"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 /**
@@ -264,7 +265,7 @@ export default function CartDrawer({
                   disabled={items.length === 0}
                   onClick={() => {
                     setOpen(false)
-                    router.push(`/${countryCode}/checkout?step=address`)
+                    router.push(countryPath(countryCode, "/checkout?step=address"))
                   }}
                   data-testid="go-to-cart-button"
                 >

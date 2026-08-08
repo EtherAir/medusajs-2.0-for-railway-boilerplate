@@ -8,6 +8,7 @@ import { AH_CATEGORIES } from "@lib/constants/ah"
 import { StoreRegion } from "@medusajs/types"
 import CountrySelect from "@modules/layout/components/country-select"
 import { useToggleState } from "@medusajs/ui"
+import { countryPath } from "@lib/util/country-path"
 
 type Level =
   | { kind: "root" }
@@ -30,7 +31,7 @@ export default function MobileMenu({ regions }: { regions: StoreRegion[] | null 
   const go = (path: string) => {
     setOpen(false)
     setLevel({ kind: "root" })
-    router.push(`/${countryCode}${path}`)
+    router.push(countryPath(countryCode, path))
   }
 
   const close = () => {

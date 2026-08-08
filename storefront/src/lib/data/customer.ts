@@ -7,6 +7,7 @@ import { revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
 import { cache } from "react"
 import { getAuthHeaders, removeAuthToken, setAuthToken } from "./cookies"
+import { countryPath } from "@lib/util/country-path"
 
 export const getCustomer = cache(async function () {
   return await sdk.store.customer
@@ -85,7 +86,7 @@ export async function signout(countryCode: string) {
   removeAuthToken()
   revalidateTag("auth")
   revalidateTag("customer")
-  redirect(`/${countryCode}/account`)
+  redirect(countryPath(countryCode, "/account"))
 }
 
 export const addCustomerAddress = async (

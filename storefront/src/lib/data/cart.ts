@@ -9,6 +9,7 @@ import { redirect } from "next/navigation"
 import { getAuthHeaders, getCartId, removeCartId, setCartId } from "./cookies"
 import { getProductsById } from "./products"
 import { getRegion } from "./regions"
+import { countryPath } from "@lib/util/country-path"
 
 export async function retrieveCart() {
   const cartId = await getCartId()
@@ -367,7 +368,7 @@ export async function placeOrder() {
     const countryCode =
       cartRes.order.shipping_address?.country_code?.toLowerCase()
     await removeCartId()
-    redirect(`/${countryCode}/order/confirmed/${cartRes?.order.id}`)
+    redirect(countryPath(countryCode, `/order/confirmed/${cartRes?.order.id}`))
   }
 
   return cartRes.cart
@@ -394,5 +395,5 @@ export async function updateRegion(countryCode: string, currentPath: string) {
   revalidateTag("regions")
   revalidateTag("products")
 
-  redirect(`/${countryCode}${currentPath}`)
+  redirect(countryPath(countryCode, currentPath))
 }
