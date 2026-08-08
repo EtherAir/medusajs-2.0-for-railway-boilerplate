@@ -68,11 +68,10 @@ export default async function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col small:flex-row justify-center gap-2 small:gap-[208px] mt-9 text-center">
+      <div className="flex justify-center mt-9 text-center">
         <span className="text-p1">
           © {new Date().getFullYear()} Ascended Health.
         </span>
-        <span className="text-p1">Made by Nice People.</span>
       </div>
     </footer>
   )

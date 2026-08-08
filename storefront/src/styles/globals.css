@@ -60,20 +60,20 @@
   --size-h2: 40px;
   --lh-h2: 0.9;
   --size-p1: 20px;
-  --lh-p1: 1.03;
+  --lh-p1: 1.2;
   --size-p2: 16px;
-  --lh-p2: 1.04;
+  --lh-p2: 1.35;
   --size-p3: 15px;
-  --lh-p3: 1.04;
-  --size-p4: 13px;
-  --lh-p4: 1.04;
-  --size-p5: 11px;
-  --lh-p5: 1.04;
+  --lh-p3: 1.35;
+  --size-p4: 14px;
+  --lh-p4: 1.35;
+  --size-p5: 12px;
+  --lh-p5: 1.35;
 
   --size-h1-mobile: 32px;
-  --size-h2-mobile: 22px;
-  --size-p1-mobile: 15px;
-  --size-p2-mobile: 11px;
+  --size-h2-mobile: 24px;
+  --size-p1-mobile: 17px;
+  --size-p2-mobile: 14px;
 
   /* Page geometry */
   --frame-desktop: 1440px;

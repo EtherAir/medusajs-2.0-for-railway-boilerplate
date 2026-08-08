@@ -45,9 +45,7 @@ export default function HeaderFrame({
         overHero ? "absolute top-0 inset-x-0" : "relative"
       )}
     >
-      <AnnouncementBar tone={white ? "white" : "seafoam"}>
-        {announcement}
-      </AnnouncementBar>
+      <AnnouncementBar>{announcement}</AnnouncementBar>
 
       <header
         className={cx(
