@@ -1,154 +1,80 @@
-import { getCategoriesList } from "@lib/data/categories"
-import { getCollectionsList } from "@lib/data/collections"
-import { Text, clx } from "@medusajs/ui"
+import Image from "next/image"
 
+import {
+  AH_CATEGORIES,
+  AH_COMMUNITY_LINE,
+  AH_FOOTER_LINKS,
+} from "@lib/constants/ah"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
+import InlineSubmitField from "@modules/common/components/ah/inline-submit-field"
+import { Submark } from "@modules/layout/components/logo"
 
-export default async function Footer() {
-  const { collections } = await getCollectionsList(0, 6)
-  const { product_categories } = await getCategoriesList(0, 6)
-
+/**
+ * The footer as drawn: community line and a 380×376 image left; newsletter
+ * row across the right, the Shop category list and the utility column
+ * beneath it, submark bottom-right; copyright and credit on the last line.
+ */
+export default function Footer() {
   return (
-    <footer className="border-t border-ui-border-base w-full">
-      <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
-            >
-              Medusa Store
-            </LocalizedClientLink>
+    <footer className="bg-ah-page pt-v82 pb-v42 px-gutter">
+      <div className="grid grid-cols-1 small:grid-cols-[380px_1fr] gap-14 small:gap-[clamp(60px,13.7vw,197px)]">
+        <div>
+          <div className="text-p1 whitespace-pre-line">{AH_COMMUNITY_LINE}</div>
+          <div className="relative w-full max-w-[380px] h-[376px] mt-[29px]">
+            <Image
+              src="/images/ah/imagery/community-water.jpg"
+              alt="Community in water"
+              fill
+              className="object-cover"
+              sizes="380px"
+            />
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
-            {product_categories && product_categories?.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Categories
-                </span>
-                <ul
-                  className="grid grid-cols-1 gap-2"
-                  data-testid="footer-categories"
-                >
-                  {product_categories?.slice(0, 6).map((c) => {
-                    if (c.parent_category) {
-                      return
-                    }
+        </div>
 
-                    const children =
-                      c.category_children?.map((child) => ({
-                        name: child.name,
-                        handle: child.handle,
-                        id: child.id,
-                      })) || null
+        <div>
+          <InlineSubmitField />
 
-                    return (
-                      <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
-                        key={c.id}
-                      >
-                        <LocalizedClientLink
-                          className={clx(
-                            "hover:text-ui-fg-base",
-                            children && "txt-small-plus"
-                          )}
-                          href={`/categories/${c.handle}`}
-                          data-testid="category-link"
-                        >
-                          {c.name}
-                        </LocalizedClientLink>
-                        {children && (
-                          <ul className="grid grid-cols-1 ml-3 gap-2">
-                            {children &&
-                              children.map((child) => (
-                                <li key={child.id}>
-                                  <LocalizedClientLink
-                                    className="hover:text-ui-fg-base"
-                                    href={`/categories/${child.handle}`}
-                                    data-testid="category-link"
-                                  >
-                                    {child.name}
-                                  </LocalizedClientLink>
-                                </li>
-                              ))}
-                          </ul>
-                        )}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            )}
-            {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
-                </span>
-                <ul
-                  className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
-                    {
-                      "grid-cols-2": (collections?.length || 0) > 3,
-                    }
-                  )}
-                >
-                  {collections?.slice(0, 6).map((c) => (
-                    <li key={c.id}>
-                      <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
-                        href={`/collections/${c.handle}`}
-                      >
-                        {c.title}
-                      </LocalizedClientLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-                <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://docs.medusajs.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Source code
-                  </a>
-                </li>
+          <div className="grid grid-cols-1 xsmall:grid-cols-[267px_1fr] gap-10 mt-[66px]">
+            <div>
+              <div className="text-p1 mb-3">Shop</div>
+              <ul className="grid gap-4 pl-v49 m-0 list-none" data-testid="footer-categories">
+                {AH_CATEGORIES.map((c) => (
+                  <li key={c.numeral}>
+                    <LocalizedClientLink
+                      href={`/categories/${c.handle}`}
+                      className="text-p2 text-ah-ink no-underline transition-ah hover:text-ah-dark-seafoam"
+                      data-testid="category-link"
+                    >
+                      {`${c.numeral} ${c.title}`}
+                    </LocalizedClientLink>
+                  </li>
+                ))}
               </ul>
             </div>
+            <div className="grid gap-5 content-start">
+              {AH_FOOTER_LINKS.map((l) => (
+                <LocalizedClientLink
+                  key={l.label}
+                  href={l.href}
+                  className="text-p1 text-ah-ink no-underline transition-ah hover:text-ah-dark-seafoam"
+                >
+                  {l.label}
+                </LocalizedClientLink>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex justify-end mt-v42">
+            <Submark />
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
-          </Text>
-          <MedusaCTA />
-        </div>
+      </div>
+
+      <div className="flex flex-col small:flex-row justify-center gap-2 small:gap-[208px] mt-9 text-center">
+        <span className="text-p1">
+          © {new Date().getFullYear()} Ascended Health.
+        </span>
+        <span className="text-p1">Made by Nice People.</span>
       </div>
     </footer>
   )
