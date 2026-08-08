@@ -124,23 +124,24 @@ export default buildConfig({
       ],
     },
   ],
-  plugins: s3Configured
-    ? [
-        s3Storage({
-          collections: { media: true },
-          bucket: process.env.S3_BUCKET!,
-          config: {
-            credentials: {
-              accessKeyId: process.env.S3_ACCESS_KEY_ID!,
-              secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
-            },
-            endpoint: process.env.S3_ENDPOINT,
-            region: process.env.S3_REGION || "us-east-1",
-            forcePathStyle: true,
-          },
-        }),
-      ]
-    : [],
+  plugins: [
+    // Always registered (so its client components are in the importMap);
+    // only active when the bucket credentials exist in the environment.
+    s3Storage({
+      enabled: Boolean(s3Configured),
+      collections: { media: true },
+      bucket: process.env.S3_BUCKET || "payload-media",
+      config: {
+        credentials: {
+          accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
+        },
+        endpoint: process.env.S3_ENDPOINT,
+        region: process.env.S3_REGION || "us-east-1",
+        forcePathStyle: true,
+      },
+    }),
+  ],
   typescript: {
     outputFile: path.resolve(dirname, "src/types/payload-types.ts"),
   },
