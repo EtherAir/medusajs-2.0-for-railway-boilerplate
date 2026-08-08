@@ -1,5 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { Button, clx } from "@medusajs/ui"
+import { clx } from "@medusajs/ui"
+import { AhButton } from "@modules/common/components/ah"
 import React, { Fragment, useMemo } from "react"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
@@ -96,34 +97,34 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               )}
             </div>
             <div className="grid grid-cols-2 w-full gap-x-4">
-              <Button
+              <AhButton
                 onClick={open}
-                variant="secondary"
-                className="w-full"
+                full
                 data-testid="mobile-actions-button"
               >
-                <div className="flex items-center justify-between w-full">
-                  <span>
+                <span className="flex items-center justify-between w-full gap-2">
+                  <span className="truncate">
                     {variant
-                      ? Object.values(options).join(" / ")
+                      ? Object.values(options).join(" / ")
                       : "Select Options"}
                   </span>
-                  <ChevronDown />
-                </div>
-              </Button>
-              <Button
+                  <span aria-hidden="true">↓</span>
+                </span>
+              </AhButton>
+              <AhButton
                 onClick={handleAddToCart}
-                disabled={!inStock || !variant}
-                className="w-full"
-                isLoading={isAdding}
+                disabled={!inStock || !variant || isAdding}
+                full
                 data-testid="mobile-cart-button"
               >
-                {!variant
+                {isAdding
+                  ? "Adding…"
+                  : !variant
                   ? "Select variant"
                   : !inStock
                   ? "Out of stock"
-                  : "Add to cart"}
-              </Button>
+                  : "Add to Cart"}
+              </AhButton>
             </div>
           </div>
         </Transition>

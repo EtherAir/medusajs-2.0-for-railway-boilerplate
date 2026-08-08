@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@medusajs/ui"
 import { isEqual } from "lodash"
+import { AhButton } from "@modules/common/components/ah"
 import { useParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
 
@@ -135,20 +135,20 @@ export default function ProductActions({
 
         <ProductPrice product={product} variant={selectedVariant} />
 
-        <Button
+        <AhButton
           onClick={handleAddToCart}
           disabled={!inStock || !selectedVariant || !!disabled || isAdding}
-          variant="primary"
-          className="w-full h-10"
-          isLoading={isAdding}
+          full
           data-testid="add-product-button"
         >
-          {!selectedVariant
+          {isAdding
+            ? "Adding…"
+            : !selectedVariant
             ? "Select variant"
             : !inStock
             ? "Out of stock"
-            : "Add to cart"}
-        </Button>
+            : "Add to Cart"}
+        </AhButton>
         <MobileActions
           product={product}
           variant={selectedVariant}

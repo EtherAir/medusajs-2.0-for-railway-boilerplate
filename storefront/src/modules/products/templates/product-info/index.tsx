@@ -1,38 +1,25 @@
 import { HttpTypes } from "@medusajs/types"
-import { Heading, Text } from "@medusajs/ui"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 type ProductInfoProps = {
   product: HttpTypes.StoreProduct
 }
 
+/**
+ * PDP heading: ALL-CAPS product name over its lowercase descriptor, set as
+ * one pre-line block at the h2 size (per the comp).
+ */
 const ProductInfo = ({ product }: ProductInfoProps) => {
   return (
     <div id="product-info">
-      <div className="flex flex-col gap-y-4 lg:max-w-[500px] mx-auto">
-        {product.collection && (
-          <LocalizedClientLink
-            href={`/collections/${product.collection.handle}`}
-            className="text-medium text-ui-fg-muted hover:text-ui-fg-subtle"
-          >
-            {product.collection.title}
-          </LocalizedClientLink>
+      <h1 className="text-h2 m-0 whitespace-pre-line" data-testid="product-title">
+        <span className="uppercase">{product.title}</span>
+        {product.subtitle && (
+          <>
+            {"\n"}
+            <span className="lowercase">{product.subtitle}</span>
+          </>
         )}
-        <Heading
-          level="h2"
-          className="text-3xl leading-10 text-ui-fg-base"
-          data-testid="product-title"
-        >
-          {product.title}
-        </Heading>
-
-        <Text
-          className="text-medium text-ui-fg-subtle whitespace-pre-line"
-          data-testid="product-description"
-        >
-          {product.description}
-        </Text>
-      </div>
+      </h1>
     </div>
   )
 }

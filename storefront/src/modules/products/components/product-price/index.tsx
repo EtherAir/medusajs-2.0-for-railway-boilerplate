@@ -1,8 +1,7 @@
-import { clx } from "@medusajs/ui"
-
 import { getProductPrice } from "@lib/util/get-product-price"
 import { HttpTypes } from "@medusajs/types"
 
+/** Bare price in large body copy. Sale price shows the original struck. */
 export default function ProductPrice({
   product,
   variant,
@@ -18,17 +17,13 @@ export default function ProductPrice({
   const selectedPrice = variant ? variantPrice : cheapestPrice
 
   if (!selectedPrice) {
-    return <div className="block w-32 h-9 bg-gray-100 animate-pulse" />
+    return <div className="block w-32 h-6 bg-ah-seafoam/50 animate-pulse" />
   }
 
   return (
-    <div className="flex flex-col text-ui-fg-base">
-      <span
-        className={clx("text-xl-semi", {
-          "text-ui-fg-interactive": selectedPrice.price_type === "sale",
-        })}
-      >
-        {!variant && "From "}
+    <div className="text-p1 text-ah-ink">
+      <span>
+        {!variant && (product.variants?.length ?? 0) > 1 && "from "}
         <span
           data-testid="product-price"
           data-value={selectedPrice.calculated_price_number}
@@ -37,21 +32,15 @@ export default function ProductPrice({
         </span>
       </span>
       {selectedPrice.price_type === "sale" && (
-        <>
-          <p>
-            <span className="text-ui-fg-subtle">Original: </span>
-            <span
-              className="line-through"
-              data-testid="original-product-price"
-              data-value={selectedPrice.original_price_number}
-            >
-              {selectedPrice.original_price}
-            </span>
-          </p>
-          <span className="text-ui-fg-interactive">
-            -{selectedPrice.percentage_diff}%
+        <span className="text-p2 text-ah-muted ml-3">
+          <span
+            className="line-through"
+            data-testid="original-product-price"
+            data-value={selectedPrice.original_price_number}
+          >
+            {selectedPrice.original_price}
           </span>
-        </>
+        </span>
       )}
     </div>
   )
