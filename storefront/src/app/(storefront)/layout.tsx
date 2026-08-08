@@ -4,7 +4,7 @@ import localFont from "next/font/local"
 import "styles/globals.css"
 
 const founders = localFont({
-  src: "../../public/fonts/FoundersGrotesk-Light.woff2",
+  src: "../../../public/fonts/FoundersGrotesk-Light.woff2",
   weight: "300",
   style: "normal",
   display: "swap",
