@@ -2,6 +2,189 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* ────────────────────────────────────────────────────────────────────────────
+   Ascended Health design tokens
+   Ported verbatim from the design handoff:
+   design_handoff_medusa_storefront/_ds/ascended-health-design-system/tokens/
+   ──────────────────────────────────────────────────────────────────────────── */
+:root {
+  /* Core brand palette */
+  --ah-light-seafoam: #e2e7e2;
+  --ah-seafoam: #c9d3c6;
+  --ah-dark-seafoam: #83998c;
+  --ah-flat-black: #231f20;
+  --ah-white: #ffffff;
+  --ah-bone: #f5f0ea;
+
+  /* Packaging colour system — one colour per product category.
+     Category panels/labels only; never buttons or type. */
+  --ah-dental-blue: #d1dcdc;
+  --ah-skin-blue: #b6c6c3;
+  --ah-superfood-teal: #afc1ab;
+  --ah-energy-green: #9fad8c;
+  --ah-probiotic-green: #b5bc98;
+  --ah-longevity-lime: #d6d8a4;
+
+  /* Incidental values from the Figma file */
+  --ah-disabled-fill: #d9d9d9;
+  --ah-scrim: rgba(222, 225, 223, 0.599);
+  --ah-drawer-scrim: rgba(35, 31, 32, 0.28);
+
+  /* Semantic aliases — use these in components */
+  --surface-page: var(--ah-light-seafoam);
+  --surface-raised: var(--ah-seafoam);
+  --surface-paper: var(--ah-bone);
+  --surface-ink: var(--ah-flat-black);
+  --surface-disabled: var(--ah-disabled-fill);
+
+  --text-primary: var(--ah-flat-black);
+  --text-inverse: var(--ah-white);
+  --text-muted: var(--ah-dark-seafoam);
+
+  --border-rule: var(--ah-flat-black);
+  --border-rule-inverse: var(--ah-white);
+
+  --link-fg: var(--ah-flat-black);
+  --link-fg-hover: var(--ah-dark-seafoam);
+  --button-fill-hover: var(--ah-seafoam);
+  --focus-ring: var(--ah-dark-seafoam);
+
+  /* Typography — Founders Grotesk Light 300 only */
+  --font-core: var(--font-founders), "Founders Grotesk", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --weight-light: 300;
+  --tracking-flat: 0;
+
+  --size-h1: 52px;
+  --lh-h1: 0.9;
+  --size-h2: 40px;
+  --lh-h2: 0.9;
+  --size-p1: 20px;
+  --lh-p1: 1.03;
+  --size-p2: 16px;
+  --lh-p2: 1.04;
+  --size-p3: 15px;
+  --lh-p3: 1.04;
+  --size-p4: 13px;
+  --lh-p4: 1.04;
+  --size-p5: 11px;
+  --lh-p5: 1.04;
+
+  --size-h1-mobile: 32px;
+  --size-h2-mobile: 22px;
+  --size-p1-mobile: 15px;
+  --size-p2-mobile: 11px;
+
+  /* Page geometry */
+  --frame-desktop: 1440px;
+  --gutter-mobile: 20px;
+  --gutter-desktop: 83px;
+  --content-max: 1274px;
+  --gutter: var(--gutter-mobile);
+
+  --nav-height: 67px;
+  --announcement-height: 36px;
+
+  /* Vertical rhythm */
+  --space-11: 11px;
+  --space-21: 21px;
+  --space-42: 42px;
+  --space-49: 49px;
+  --space-67: 67px;
+  --space-82: 82px;
+  --space-111: 111px;
+  --space-165: 165px;
+
+  /* Controls */
+  --control-height: 48px;
+  --control-height-mobile: 45px;
+  --field-height: 39px;
+  --checkbox-size: 11px;
+  --dot-size: 8px;
+
+  /* Surfaces — no shadows, no radii; hairline rules only */
+  --rule-hairline: 0.5px;
+  --rule-solid: 1px;
+  --outline-control: inset 0 0 0 1px var(--border-rule);
+  --outline-hairline: inset 0 0 0 0.5px var(--border-rule);
+
+  /* Motion — colour and opacity cross-fades only */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-hover: 160ms;
+  --dur-flyout: 240ms;
+  --dur-page: 320ms;
+  --transition-hover: color var(--dur-hover) var(--ease-standard),
+    background-color var(--dur-hover) var(--ease-standard),
+    opacity var(--dur-hover) var(--ease-standard);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* 83/1440 = 5.764vw → exactly 83px gutters at the 1440 design frame */
+    --gutter: clamp(40px, 5.764vw, 83px);
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Migration bridge: @medusajs/ui-preset variable overrides.
+   Keeps not-yet-redesigned pages on-palette. Delete in the final cleanup
+   phase together with the preset itself.
+   ──────────────────────────────────────────────────────────────────────────── */
+:root,
+:root[data-mode="light"] {
+  --bg-base: var(--ah-light-seafoam);
+  --bg-subtle: var(--ah-light-seafoam);
+  --bg-subtle-hover: var(--ah-seafoam);
+  --bg-field: var(--ah-light-seafoam);
+  --bg-field-hover: var(--ah-seafoam);
+  --bg-highlight: var(--ah-seafoam);
+  --bg-interactive: var(--ah-dark-seafoam);
+  --fg-base: var(--ah-flat-black);
+  --fg-subtle: var(--ah-flat-black);
+  --fg-muted: var(--ah-dark-seafoam);
+  --fg-disabled: var(--ah-dark-seafoam);
+  --fg-interactive: var(--ah-flat-black);
+  --fg-interactive-hover: var(--ah-dark-seafoam);
+  --border-base: var(--ah-flat-black);
+  --border-strong: var(--ah-flat-black);
+  --border-interactive: var(--ah-dark-seafoam);
+  --elevation-card-rest: none;
+  --elevation-card-hover: none;
+  --elevation-flyout: none;
+  --elevation-modal: none;
+  --borders-base: inset 0 0 0 1px var(--ah-flat-black);
+  --borders-interactive-with-active: inset 0 0 0 1px var(--ah-dark-seafoam);
+  --borders-interactive-with-focus: inset 0 0 0 1px var(--ah-dark-seafoam);
+}
+
+@layer base {
+  html {
+    background: var(--surface-page);
+    color: var(--text-primary);
+  }
+
+  body {
+    font-family: var(--font-core);
+    font-weight: var(--weight-light);
+    letter-spacing: var(--tracking-flat);
+  }
+
+  /* The brand has one weight. Faux-bold must never appear. */
+  b,
+  strong {
+    font-weight: var(--weight-light);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--ah-seafoam);
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -35,9 +218,9 @@
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    border: 1px solid #212121;
-    -webkit-text-fill-color: #212121;
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    border: 1px solid var(--ah-flat-black);
+    -webkit-text-fill-color: var(--ah-flat-black);
+    -webkit-box-shadow: 0 0 0px 1000px var(--ah-light-seafoam) inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 
@@ -47,66 +230,151 @@
   input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
+
+  /* AH motion primitives */
+  .transition-ah {
+    transition: var(--transition-hover);
+  }
+
+  /* Scroll reveal — fail-open: visible by default, JS applies .reveal-ready
+     before observing, .is-in restores. No JS → content always visible. */
+  .reveal-ready {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 700ms var(--ease-standard),
+      transform 700ms var(--ease-standard);
+  }
+
+  .reveal-ready.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-ready {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 }
 
 @layer components {
   .content-container {
-    @apply max-w-[1440px] w-full mx-auto px-6;
+    @apply w-full mx-auto;
+    max-width: var(--frame-desktop);
+    padding-inline: var(--gutter);
+  }
+
+  /* ── AH semantic type scale ──
+     One class per text node. Mobile size at base, desktop from 1024px. */
+  .text-h1 {
+    font-size: var(--size-h1-mobile);
+    line-height: var(--lh-h1);
+    font-weight: var(--weight-light);
+    letter-spacing: var(--tracking-flat);
+  }
+
+  .text-h2 {
+    font-size: var(--size-h2-mobile);
+    line-height: var(--lh-h2);
+    font-weight: var(--weight-light);
+    letter-spacing: var(--tracking-flat);
+  }
+
+  .text-p1 {
+    font-size: var(--size-p1-mobile);
+    line-height: var(--lh-p1);
+    font-weight: var(--weight-light);
+  }
+
+  .text-p2 {
+    font-size: var(--size-p2-mobile);
+    line-height: var(--lh-p2);
+    font-weight: var(--weight-light);
+  }
+
+  .text-p3 {
+    font-size: var(--size-p3);
+    line-height: var(--lh-p3);
+    font-weight: var(--weight-light);
+  }
+
+  .text-p4 {
+    font-size: var(--size-p4);
+    line-height: var(--lh-p4);
+    font-weight: var(--weight-light);
+  }
+
+  .text-p5 {
+    font-size: var(--size-p5);
+    line-height: var(--lh-p5);
+    font-weight: var(--weight-light);
+  }
+
+  @media (min-width: 1024px) {
+    .text-h1 {
+      font-size: var(--size-h1);
+    }
+    .text-h2 {
+      font-size: var(--size-h2);
+    }
+    .text-p1 {
+      font-size: var(--size-p1);
+    }
+    .text-p2 {
+      font-size: var(--size-p2);
+    }
+  }
+
+  /* Hairline rules */
+  .rule-t {
+    border-top: var(--rule-hairline) solid var(--border-rule);
+  }
+
+  .rule-b {
+    border-bottom: var(--rule-hairline) solid var(--border-rule);
   }
 
   .contrast-btn {
-    @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+    @apply px-4 py-2 border border-ah-ink hover:bg-ah-seafoam transition-ah;
   }
 
+  /* ── Legacy type-scale aliases (migration bridge) ──
+     The boilerplate's three type systems collapse onto the AH scale.
+     "semi" weights alias to 300 — the brand has no bold.
+     Delete in the final cleanup phase. */
   .text-xsmall-regular {
-    @apply text-[10px] leading-4 font-normal;
+    @apply text-p5;
   }
 
-  .text-small-regular {
-    @apply text-xs leading-5 font-normal;
-  }
-
+  .text-small-regular,
   .text-small-semi {
-    @apply text-xs leading-5 font-semibold;
+    @apply text-p4;
   }
 
-  .text-base-regular {
-    @apply text-sm leading-6 font-normal;
-  }
-
+  .text-base-regular,
   .text-base-semi {
-    @apply text-sm leading-6 font-semibold;
+    @apply text-p3;
   }
 
-  .text-large-regular {
-    @apply text-base leading-6 font-normal;
-  }
-
+  .text-large-regular,
   .text-large-semi {
-    @apply text-base leading-6 font-semibold;
+    @apply text-p2;
   }
 
-  .text-xl-regular {
-    @apply text-2xl leading-[36px] font-normal;
-  }
-
+  .text-xl-regular,
   .text-xl-semi {
-    @apply text-2xl leading-[36px] font-semibold;
+    @apply text-p1;
   }
 
-  .text-2xl-regular {
-    @apply text-[30px] leading-[48px] font-normal;
-  }
-
+  .text-2xl-regular,
   .text-2xl-semi {
-    @apply text-[30px] leading-[48px] font-semibold;
+    @apply text-h2;
   }
 
-  .text-3xl-regular {
-    @apply text-[32px] leading-[44px] font-normal;
-  }
-
+  .text-3xl-regular,
   .text-3xl-semi {
-    @apply text-[32px] leading-[44px] font-semibold;
+    @apply text-h2;
   }
 }

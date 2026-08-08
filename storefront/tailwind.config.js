@@ -21,6 +21,26 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
+        // Ascended Health palette — values live as CSS custom properties in
+        // globals.css; Tailwind only references them.
+        ah: {
+          page: "var(--surface-page)",
+          seafoam: "var(--ah-seafoam)",
+          "dark-seafoam": "var(--ah-dark-seafoam)",
+          ink: "var(--surface-ink)",
+          bone: "var(--ah-bone)",
+          white: "var(--ah-white)",
+          disabled: "var(--surface-disabled)",
+          muted: "var(--text-muted)",
+          tint: {
+            dental: "var(--ah-dental-blue)",
+            skin: "var(--ah-skin-blue)",
+            superfood: "var(--ah-superfood-teal)",
+            energy: "var(--ah-energy-green)",
+            probiotic: "var(--ah-probiotic-green)",
+            longevity: "var(--ah-longevity-lime)",
+          },
+        },
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",
@@ -60,15 +80,37 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          "Inter",
+          "var(--font-founders)",
+          "Founders Grotesk",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
-          "Roboto",
           "Helvetica Neue",
-          "Ubuntu",
+          "Arial",
           "sans-serif",
         ],
+      },
+      spacing: {
+        v11: "11px",
+        v21: "21px",
+        v42: "42px",
+        v49: "49px",
+        v67: "67px",
+        v82: "82px",
+        v111: "111px",
+        v165: "165px",
+        gutter: "var(--gutter)",
+        nav: "var(--nav-height)",
+      },
+      borderWidth: {
+        hairline: "0.5px",
+      },
+      transitionDuration: {
+        hover: "160ms",
+        flyout: "240ms",
+      },
+      transitionTimingFunction: {
+        ah: "cubic-bezier(0.4, 0, 0.2, 1)",
       },
       keyframes: {
         ring: {
