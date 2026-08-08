@@ -18,18 +18,18 @@ const Register = ({ setCurrentView }: Props) => {
 
   return (
     <div
-      className="max-w-sm flex flex-col items-center"
+      className="max-w-[441px] w-full flex flex-col"
       data-testid="register-page"
     >
-      <h1 className="text-large-semi uppercase mb-6">
-        Become a Medusa Store Member
+      <h1 className="text-p1 m-0 mb-3">
+        Create an account
       </h1>
-      <p className="text-center text-base-regular text-ui-fg-base mb-4">
+      <p className="text-p2 text-ah-muted m-0 mb-[34px]">
         Create your Medusa Store Member profile, and get access to an enhanced
         shopping experience.
       </p>
       <form className="w-full flex flex-col" action={formAction}>
-        <div className="flex flex-col w-full gap-y-2">
+        <div className="flex flex-col w-full gap-y-[34px]">
           <Input
             label="First name"
             name="first_name"
@@ -69,8 +69,8 @@ const Register = ({ setCurrentView }: Props) => {
           />
         </div>
         <ErrorMessage error={message} data-testid="register-error" />
-        <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          By creating an account, you agree to Medusa Store&apos;s{" "}
+        <span className="text-p2 mt-6">
+          By creating an account, you agree to Ascended Health&apos;s{" "}
           <LocalizedClientLink
             href="/content/privacy-policy"
             className="underline"
@@ -90,7 +90,7 @@ const Register = ({ setCurrentView }: Props) => {
           Join
         </SubmitButton>
       </form>
-      <span className="text-center text-ui-fg-base text-small-regular mt-6">
+      <span className="text-p2 mt-6">
         Already a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
