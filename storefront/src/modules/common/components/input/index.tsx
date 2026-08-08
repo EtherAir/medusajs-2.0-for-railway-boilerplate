@@ -1,8 +1,6 @@
-import { Label } from "@medusajs/ui"
 import React, { useEffect, useImperativeHandle, useState } from "react"
 
-import Eye from "@modules/common/icons/eye"
-import EyeOff from "@modules/common/icons/eye-off"
+import EyeIcon from "@modules/common/components/ah/eye-icon"
 
 type InputProps = Omit<
   Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
@@ -15,6 +13,10 @@ type InputProps = Omit<
   topLabel?: string
 }
 
+/**
+ * Underlined AH text field: muted label above, 39px input row on a 1px ink
+ * rule, Dark Seafoam focus. Password fields use the brand eye glyph.
+ */
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ type, name, label, touched, required, topLabel, ...props }, ref) => {
     const inputRef = React.useRef<HTMLInputElement>(null)
@@ -35,34 +37,30 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className="flex flex-col w-full">
-        {topLabel && (
-          <Label className="mb-2 txt-compact-medium-plus">{topLabel}</Label>
-        )}
-        <div className="flex relative z-0 w-full txt-compact-medium">
+        {topLabel && <span className="text-p2 text-ah-ink mb-2">{topLabel}</span>}
+        <label htmlFor={name} className="text-p2 text-ah-muted">
+          {label}
+          {required && " *"}
+        </label>
+        <div className="relative w-full">
           <input
             type={inputType}
+            id={name}
             name={name}
             placeholder=" "
             required={required}
-            className="pt-4 pb-1 block w-full h-11 px-4 mt-0 bg-ui-bg-field border rounded-md appearance-none focus:outline-none focus:ring-0 focus:shadow-borders-interactive-with-active border-ui-border-base hover:bg-ui-bg-field-hover"
+            className="w-full h-[var(--field-height)] bg-transparent text-p2 text-ah-ink border-0 border-b border-ah-ink rounded-none outline-none focus:border-ah-dark-seafoam transition-ah appearance-none px-0"
             {...props}
             ref={inputRef}
           />
-          <label
-            htmlFor={name}
-            onClick={() => inputRef.current?.focus()}
-            className="flex items-center justify-center mx-3 px-1 transition-all absolute duration-300 top-3 -z-1 origin-0 text-ui-fg-subtle"
-          >
-            {label}
-            {required && <span className="text-rose-500">*</span>}
-          </label>
           {type === "password" && (
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="text-ui-fg-subtle px-4 focus:outline-none transition-all duration-150 outline-none focus:text-ui-fg-base absolute right-0 top-3"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+              className="absolute right-0 top-1/2 -translate-y-1/2 text-ah-muted transition-ah hover:text-ah-ink"
             >
-              {showPassword ? <Eye /> : <EyeOff />}
+              <EyeIcon open={showPassword} />
             </button>
           )}
         </div>

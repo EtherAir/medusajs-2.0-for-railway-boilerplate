@@ -1,7 +1,6 @@
 "use client"
 
-import { CheckCircleSolid } from "@medusajs/icons"
-import { Heading, Text, useToggleState } from "@medusajs/ui"
+import { useToggleState } from "@medusajs/ui"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import Divider from "@modules/common/components/divider"
@@ -42,25 +41,19 @@ const Addresses = ({
   const [message, formAction] = useFormState(setAddresses, null)
 
   return (
-    <div className="bg-white">
-      <div className="flex flex-row items-center justify-between mb-6">
-        <Heading
-          level="h2"
-          className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
-        >
-          Shipping Address
-          {!isOpen && <CheckCircleSolid />}
-        </Heading>
+    <div>
+      <div className="flex flex-row items-baseline justify-between mb-6">
+        <h2 className="text-p1 m-0">
+          I. Contact &amp; shipping address
+        </h2>
         {!isOpen && cart?.shipping_address && (
-          <Text>
-            <button
-              onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
-              data-testid="edit-address-button"
-            >
-              Edit
-            </button>
-          </Text>
+          <button
+            onClick={handleEdit}
+            className="text-p2 text-ah-ink transition-ah hover:text-ah-dark-seafoam"
+            data-testid="edit-address-button"
+          >
+            Edit →
+          </button>
         )}
       </div>
       {isOpen ? (
@@ -75,12 +68,7 @@ const Addresses = ({
 
             {!sameAsBilling && (
               <div>
-                <Heading
-                  level="h2"
-                  className="text-3xl-regular gap-x-4 pb-6 pt-8"
-                >
-                  Billing address
-                </Heading>
+                <h2 className="text-p1 pb-6 pt-8 m-0">Billing address</h2>
 
                 <BillingAddress cart={cart} />
               </div>
@@ -96,75 +84,69 @@ const Addresses = ({
           <div className="text-small-regular">
             {cart && cart.shipping_address ? (
               <div className="flex items-start gap-x-8">
-                <div className="flex items-start gap-x-1 w-full">
+                <div className="grid grid-cols-1 xsmall:grid-cols-3 gap-6 w-full">
                   <div
-                    className="flex flex-col w-1/3"
+                    className="flex flex-col"
                     data-testid="shipping-address-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Shipping Address
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <span className="text-p2 mb-1">Shipping Address</span>
+                    <span className="text-p2 text-ah-muted">
                       {cart.shipping_address.first_name}{" "}
                       {cart.shipping_address.last_name}
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    </span>
+                    <span className="text-p2 text-ah-muted">
                       {cart.shipping_address.address_1}{" "}
                       {cart.shipping_address.address_2}
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    </span>
+                    <span className="text-p2 text-ah-muted">
                       {cart.shipping_address.postal_code},{" "}
                       {cart.shipping_address.city}
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    </span>
+                    <span className="text-p2 text-ah-muted">
                       {cart.shipping_address.country_code?.toUpperCase()}
-                    </Text>
+                    </span>
                   </div>
 
                   <div
-                    className="flex flex-col w-1/3 "
+                    className="flex flex-col"
                     data-testid="shipping-contact-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Contact
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <span className="text-p2 mb-1">Contact</span>
+                    <span className="text-p2 text-ah-muted">
                       {cart.shipping_address.phone}
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    </span>
+                    <span className="text-p2 text-ah-muted">
                       {cart.email}
-                    </Text>
+                    </span>
                   </div>
 
                   <div
-                    className="flex flex-col w-1/3"
+                    className="flex flex-col"
                     data-testid="billing-address-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Billing Address
-                    </Text>
+                    <span className="text-p2 mb-1">Billing Address</span>
 
                     {sameAsBilling ? (
-                      <Text className="txt-medium text-ui-fg-subtle">
+                      <span className="text-p2 text-ah-muted">
                         Billing- and delivery address are the same.
-                      </Text>
+                      </span>
                     ) : (
                       <>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        <span className="text-p2 text-ah-muted">
                           {cart.billing_address?.first_name}{" "}
                           {cart.billing_address?.last_name}
-                        </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        </span>
+                        <span className="text-p2 text-ah-muted">
                           {cart.billing_address?.address_1}{" "}
                           {cart.billing_address?.address_2}
-                        </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        </span>
+                        <span className="text-p2 text-ah-muted">
                           {cart.billing_address?.postal_code},{" "}
                           {cart.billing_address?.city}
-                        </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        </span>
+                        <span className="text-p2 text-ah-muted">
                           {cart.billing_address?.country_code?.toUpperCase()}
-                        </Text>
+                        </span>
                       </>
                     )}
                   </div>

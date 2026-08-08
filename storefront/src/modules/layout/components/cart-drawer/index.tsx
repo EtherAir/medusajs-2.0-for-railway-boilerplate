@@ -9,6 +9,7 @@ import { convertToLocale } from "@lib/util/money"
 import { deleteLineItem, updateLineItem } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 import { AhButton } from "@modules/common/components/ah"
+import LineItemPrice from "@modules/common/components/line-item-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 /**
@@ -43,11 +44,6 @@ function DrawerLineItem({ item }: { item: HttpTypes.StoreCartLineItem }) {
       setUpdating(false)
     }
   }
-
-  const unitTotal = convertToLocale({
-    amount: item.total ?? 0,
-    currency_code: item.currency_code ?? "usd",
-  })
 
   return (
     <div
@@ -119,7 +115,7 @@ function DrawerLineItem({ item }: { item: HttpTypes.StoreCartLineItem }) {
         </div>
       </div>
       <div className="flex-none flex items-start gap-7">
-        <span className="text-p1">{unitTotal}</span>
+        <span className="text-p1"><LineItemPrice item={item} style="tight" /></span>
         {item.thumbnail && (
           <Image
             src={item.thumbnail}

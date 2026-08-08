@@ -1,25 +1,25 @@
 "use client"
 
-import { Table, Text, clx } from "@medusajs/ui"
-
-import { updateLineItem } from "@lib/data/cart"
-import { HttpTypes } from "@medusajs/types"
-import CartItemSelect from "@modules/cart/components/cart-item-select"
-import ErrorMessage from "@modules/checkout/components/error-message"
-import DeleteButton from "@modules/common/components/delete-button"
-import LineItemOptions from "@modules/common/components/line-item-options"
-import LineItemPrice from "@modules/common/components/line-item-price"
-import LineItemUnitPrice from "@modules/common/components/line-item-unit-price"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import Spinner from "@modules/common/icons/spinner"
-import Thumbnail from "@modules/products/components/thumbnail"
 import { useState } from "react"
+import Image from "next/image"
+
+import { deleteLineItem, updateLineItem } from "@lib/data/cart"
+import { HttpTypes } from "@medusajs/types"
+import ErrorMessage from "@modules/checkout/components/error-message"
+import LineItemPrice from "@modules/common/components/line-item-price"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { cx } from "@modules/common/components/ah"
 
 type ItemProps = {
   item: HttpTypes.StoreCartLineItem
   type?: "full" | "preview"
 }
 
+/**
+ * Ruled cart line per the comp: caps name over lowercase descriptor, variant
+ * line, 61×29 outlined qty stepper with "Remove →", price and packshot
+ * right. Preview type (checkout summary) is a compact row.
+ */
 const Item = ({ item, type = "full" }: ItemProps) => {
   const [updating, setUpdating] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -29,105 +29,135 @@ const Item = ({ item, type = "full" }: ItemProps) => {
   const changeQuantity = async (quantity: number) => {
     setError(null)
     setUpdating(true)
-
-    const message = await updateLineItem({
-      lineId: item.id,
-      quantity,
-    })
-      .catch((err) => {
-        setError(err.message)
-      })
-      .finally(() => {
-        setUpdating(false)
-      })
+    try {
+      if (quantity <= 0) {
+        await deleteLineItem(item.id)
+      } else {
+        await updateLineItem({ lineId: item.id, quantity }).catch((err) =>
+          setError(err.message)
+        )
+      }
+    } finally {
+      setUpdating(false)
+    }
   }
 
-  // TODO: Update this to grab the actual max inventory
-  const maxQtyFromInventory = 10
-  const maxQuantity = item.variant?.manage_inventory ? 10 : maxQtyFromInventory
+  const showVariant =
+    item.variant?.title && item.variant.title !== "Default variant"
+
+  if (type === "preview") {
+    return (
+      <div
+        className="flex gap-4 justify-between items-start"
+        data-testid="product-row"
+      >
+        <div className="flex gap-4 items-start">
+          {item.thumbnail && (
+            <Image
+              src={item.thumbnail}
+              alt={item.product_title ?? ""}
+              width={48}
+              height={60}
+              className="object-contain w-12 h-[60px] flex-none"
+            />
+          )}
+          <div className="text-p2">
+            <span className="uppercase block" data-testid="product-title">
+              {item.product_title}
+            </span>
+            {showVariant && (
+              <span className="text-ah-muted block" data-testid="product-variant">
+                {item.variant?.title}
+              </span>
+            )}
+            <span className="text-ah-muted block">× {item.quantity}</span>
+          </div>
+        </div>
+        <span className="text-p2 flex-none"><LineItemPrice item={item} style="tight" /></span>
+      </div>
+    )
+  }
 
   return (
-    <Table.Row className="w-full" data-testid="product-row">
-      <Table.Cell className="!pl-0 p-4 w-24">
+    <div
+      className={cx(
+        "flex gap-6 justify-between border-t-hairline border-ah-ink pt-8 first:border-t-0 first:pt-0",
+        updating && "opacity-50"
+      )}
+      data-testid="product-row"
+    >
+      <div className="flex-1">
         <LocalizedClientLink
           href={`/products/${handle}`}
-          className={clx("flex", {
-            "w-16": type === "preview",
-            "small:w-24 w-12": type === "full",
-          })}
+          className="no-underline text-ah-ink transition-ah hover:text-ah-dark-seafoam"
         >
-          <Thumbnail
-            thumbnail={item.variant?.product?.thumbnail}
-            images={item.variant?.product?.images}
-            size="square"
-          />
-        </LocalizedClientLink>
-      </Table.Cell>
-
-      <Table.Cell className="text-left">
-        <Text
-          className="txt-medium-plus text-ui-fg-base"
-          data-testid="product-title"
-        >
-          {item.product_title}
-        </Text>
-        <LineItemOptions variant={item.variant} data-testid="product-variant" />
-      </Table.Cell>
-
-      {type === "full" && (
-        <Table.Cell>
-          <div className="flex gap-2 items-center w-28">
-            <DeleteButton id={item.id} data-testid="product-delete-button" />
-            <CartItemSelect
-              value={item.quantity}
-              onChange={(value) => changeQuantity(parseInt(value.target.value))}
-              className="w-14 h-10 p-4"
-              data-testid="product-select-button"
-            >
-              {/* TODO: Update this with the v2 way of managing inventory */}
-              {Array.from(
-                {
-                  length: Math.min(maxQuantity, 10),
-                },
-                (_, i) => (
-                  <option value={i + 1} key={i}>
-                    {i + 1}
-                  </option>
-                )
-              )}
-
-              <option value={1} key={1}>
-                1
-              </option>
-            </CartItemSelect>
-            {updating && <Spinner />}
-          </div>
-          <ErrorMessage error={error} data-testid="product-error-message" />
-        </Table.Cell>
-      )}
-
-      {type === "full" && (
-        <Table.Cell className="hidden small:table-cell">
-          <LineItemUnitPrice item={item} style="tight" />
-        </Table.Cell>
-      )}
-
-      <Table.Cell className="!pr-0">
-        <span
-          className={clx("!pr-0", {
-            "flex flex-col items-end h-full justify-center": type === "preview",
-          })}
-        >
-          {type === "preview" && (
-            <span className="flex gap-x-1 ">
-              <Text className="text-ui-fg-muted">{item.quantity}x </Text>
-              <LineItemUnitPrice item={item} style="tight" />
+          <div className="text-p1">
+            <span className="uppercase" data-testid="product-title">
+              {item.product_title}
             </span>
-          )}
-          <LineItemPrice item={item} style="tight" />
-        </span>
-      </Table.Cell>
-    </Table.Row>
+            {item.subtitle && (
+              <span className="lowercase block">{item.subtitle}</span>
+            )}
+          </div>
+        </LocalizedClientLink>
+        {showVariant && (
+          <div className="text-p2 mt-3" data-testid="product-variant">
+            {item.variant?.title}
+          </div>
+        )}
+        <div className="flex items-center gap-[25px] mt-[22px]">
+          <div
+            className="w-[61px] h-[29px] border border-ah-ink flex items-center justify-between px-[6px]"
+            data-testid="product-select-button"
+          >
+            <button
+              type="button"
+              aria-label="Decrease quantity"
+              disabled={updating}
+              onClick={() => changeQuantity(item.quantity - 1)}
+              className="text-p2 w-4 text-left"
+            >
+              –
+            </button>
+            <span className="text-p2" data-value={item.quantity}>
+              {item.quantity}
+            </span>
+            <button
+              type="button"
+              aria-label="Increase quantity"
+              disabled={updating}
+              onClick={() => changeQuantity(item.quantity + 1)}
+              className="text-p2 w-4 text-right"
+            >
+              +
+            </button>
+          </div>
+          <button
+            type="button"
+            disabled={updating}
+            onClick={() => changeQuantity(0)}
+            className="text-p2 text-ah-ink underline decoration-[0.5px] underline-offset-[7px] transition-ah hover:text-ah-dark-seafoam"
+            data-testid="product-delete-button"
+          >
+            Remove →
+          </button>
+        </div>
+        <ErrorMessage error={error} data-testid="product-error-message" />
+      </div>
+
+      <div className="flex-none flex items-start gap-7">
+        <span className="text-p1"><LineItemPrice item={item} style="tight" /></span>
+        {item.thumbnail && (
+          <Image
+            src={item.thumbnail}
+            alt={item.product_title ?? ""}
+            width={88}
+            height={110}
+            className="object-contain w-[72px] small:w-[88px] h-auto"
+          />
+        )}
+      </div>
+    </div>
   )
 }
 

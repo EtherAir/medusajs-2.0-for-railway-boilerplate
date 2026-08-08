@@ -1,12 +1,13 @@
 "use client"
 
-import { Button } from "@medusajs/ui"
 import React from "react"
 import { useFormStatus } from "react-dom"
 
+import { AhButton } from "@modules/common/components/ah"
+
 export function SubmitButton({
   children,
-  variant = "primary",
+  variant,
   className,
   "data-testid": dataTestId,
 }: {
@@ -18,15 +19,13 @@ export function SubmitButton({
   const { pending } = useFormStatus()
 
   return (
-    <Button
-      size="large"
+    <AhButton
       className={className}
       type="submit"
-      isLoading={pending}
-      variant={variant || "primary"}
+      disabled={pending}
       data-testid={dataTestId}
     >
-      {children}
-    </Button>
+      {pending ? "One moment…" : children}
+    </AhButton>
   )
 }

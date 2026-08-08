@@ -1,11 +1,10 @@
 "use client"
 
-import { Button, Heading } from "@medusajs/ui"
-
+import { AH_ANNOUNCEMENT } from "@lib/constants/ah"
 import CartTotals from "@modules/common/components/cart-totals"
-import Divider from "@modules/common/components/divider"
 import DiscountCode from "@modules/checkout/components/discount-code"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { AhButton, AhRule } from "@modules/common/components/ah"
 import { HttpTypes } from "@medusajs/types"
 
 type SummaryProps = {
@@ -24,24 +23,29 @@ function getCheckoutStep(cart: HttpTypes.StoreCart) {
   }
 }
 
+/** Cart aside: rule, totals, free-shipping note, full-width checkout button. */
 const Summary = ({ cart }: SummaryProps) => {
   const step = getCheckoutStep(cart)
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <Heading level="h2" className="text-[2rem] leading-[2.75rem]">
-        Summary
-      </Heading>
-      <DiscountCode cart={cart} />
-      <Divider />
-      <CartTotals totals={cart} />
-      <LocalizedClientLink
-        href={"/checkout?step=" + step}
-        data-testid="checkout-button"
-      >
-        <Button className="w-full h-10">Go to checkout</Button>
-      </LocalizedClientLink>
-    </div>
+    <aside>
+      <AhRule />
+      <div className="pt-[18px]">
+        <CartTotals totals={cart} />
+      </div>
+      <div className="mt-[18px] text-p2 text-ah-muted">{AH_ANNOUNCEMENT}</div>
+      <div className="mt-6">
+        <DiscountCode cart={cart} />
+      </div>
+      <div className="mt-[34px]">
+        <LocalizedClientLink
+          href={"/checkout?step=" + step}
+          data-testid="checkout-button"
+        >
+          <AhButton full>Go to Checkout</AhButton>
+        </LocalizedClientLink>
+      </div>
+    </aside>
   )
 }
 

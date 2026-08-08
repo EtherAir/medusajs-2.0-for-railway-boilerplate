@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@medusajs/ui"
+import { AhButton } from "@modules/common/components/ah"
 import { OnApproveActions, OnApproveData } from "@paypal/paypal-js"
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
@@ -59,7 +59,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
         />
       )
     default:
-      return <Button disabled>Select a payment method</Button>
+      return <AhButton full disabled>Select a payment method</AhButton>
   }
 }
 
@@ -72,13 +72,12 @@ const GiftCardPaymentButton = () => {
   }
 
   return (
-    <Button
+    <AhButton full
       onClick={handleOrder}
-      isLoading={submitting}
       data-testid="submit-order-button"
     >
-      Place order
-    </Button>
+      Place Order
+    </AhButton>
   )
 }
 
@@ -172,15 +171,13 @@ const StripePaymentButton = ({
 
   return (
     <>
-      <Button
+      <AhButton full
         disabled={disabled || notReady}
         onClick={handlePayment}
-        size="large"
-        isLoading={submitting}
         data-testid={dataTestId}
       >
-        Place order
-      </Button>
+        Place Order
+      </AhButton>
       <ErrorMessage
         error={errorMessage}
         data-testid="stripe-payment-error-message"
@@ -281,15 +278,13 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
 
   return (
     <>
-      <Button
+      <AhButton full
         disabled={notReady}
-        isLoading={submitting}
         onClick={handlePayment}
-        size="large"
         data-testid="submit-order-button"
       >
-        Place order
-      </Button>
+        Place Order
+      </AhButton>
       <ErrorMessage
         error={errorMessage}
         data-testid="manual-payment-error-message"
