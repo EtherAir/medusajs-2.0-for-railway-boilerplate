@@ -1,14 +1,19 @@
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
-import InteractiveLink from "@modules/common/components/interactive-link"
+import { AH_CATEGORIES } from "@lib/constants/ah"
+import { AhArrowLink, AhRule } from "@modules/common/components/ah"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
-import RefinementList from "@modules/store/components/refinement-list"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
+import FilterFlyout from "@modules/shop/components/filter-flyout"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { HttpTypes } from "@medusajs/types"
 
+/**
+ * Category page: breadcrumb (Home → Shop → Category), roman-numeraled H1,
+ * 3-col grid, edge FILTER tab (conditions only), Shop all beneath.
+ */
 export default function CategoryTemplate({
   categories,
   sortBy,
@@ -24,60 +29,71 @@ export default function CategoryTemplate({
   const sort = sortBy || "created_at"
 
   const category = categories[categories.length - 1]
-  const parents = categories.slice(0, categories.length - 1)
 
   if (!category || !countryCode) notFound()
 
+  // Roman numeral from category metadata (seeded) or the static handle map.
+  const numeral =
+    (category.metadata?.numeral as string | undefined) ??
+    AH_CATEGORIES.find((c) => c.handle === category.handle)?.numeral
+
   return (
-    <div
-      className="flex flex-col small:flex-row small:items-start py-6 content-container"
+    <main
+      className="relative pt-16 min-h-[700px]"
       data-testid="category-container"
     >
-      <RefinementList sortBy={sort} data-testid="sort-by-container" />
-      <div className="w-full">
-        <div className="flex flex-row mb-8 text-2xl-semi gap-4">
-          {parents &&
-            parents.map((parent) => (
-              <span key={parent.id} className="text-ui-fg-subtle">
-                <LocalizedClientLink
-                  className="mr-4 hover:text-black"
-                  href={`/categories/${parent.handle}`}
-                  data-testid="sort-by-link"
-                >
-                  {parent.name}
-                </LocalizedClientLink>
-                /
-              </span>
-            ))}
-          <h1 data-testid="category-page-title">{category.name}</h1>
-        </div>
+      <FilterFlyout showCategories={false} top={190} />
+
+      <div className="content-container">
+        <nav className="flex gap-[10px] text-p2 mb-5">
+          <LocalizedClientLink
+            href="/"
+            className="text-ah-muted no-underline transition-ah hover:text-ah-ink"
+          >
+            Home
+          </LocalizedClientLink>
+          <span className="text-ah-muted" aria-hidden="true">
+            →
+          </span>
+          <LocalizedClientLink
+            href="/shop"
+            className="text-ah-muted no-underline transition-ah hover:text-ah-ink"
+          >
+            Shop
+          </LocalizedClientLink>
+          <span className="text-ah-muted" aria-hidden="true">
+            →
+          </span>
+          <span>{category.name}</span>
+        </nav>
+
+        <h1 className="text-h1 m-0" data-testid="category-page-title">
+          {numeral ? `${numeral} ` : ""}
+          {category.name}
+        </h1>
+
         {category.description && (
-          <div className="mb-8 text-base-regular">
-            <p>{category.description}</p>
-          </div>
+          <p className="text-p1 mt-3 m-0 max-w-[600px]">
+            {category.description}
+          </p>
         )}
-        {category.category_children && (
-          <div className="mb-8 text-base-large">
-            <ul className="grid grid-cols-1 gap-2">
-              {category.category_children?.map((c) => (
-                <li key={c.id}>
-                  <InteractiveLink href={`/categories/${c.handle}`}>
-                    {c.name}
-                  </InteractiveLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-        <Suspense fallback={<SkeletonProductGrid />}>
-          <PaginatedProducts
-            sortBy={sort}
-            page={pageNumber}
-            categoryId={category.id}
-            countryCode={countryCode}
-          />
-        </Suspense>
+
+        <div className="pt-v49 pb-[62px]">
+          <Suspense fallback={<SkeletonProductGrid />}>
+            <PaginatedProducts
+              sortBy={sort}
+              page={pageNumber}
+              categoryId={category.id}
+              countryCode={countryCode}
+            />
+          </Suspense>
+        </div>
+
+        <AhRule />
+        <div className="pt-[34px] pb-[92px]">
+          <AhArrowLink href="/shop">Shop all</AhArrowLink>
+        </div>
       </div>
-    </div>
+    </main>
   )
 }
