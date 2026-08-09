@@ -1,4 +1,5 @@
 import { withPayload } from "@payloadcms/next/withPayload"
+import { ahRedirects } from "./src/lib/redirects.mjs"
 import checkEnvVariables from "./check-env-variables.js"
 
 checkEnvVariables()
@@ -15,6 +16,9 @@ const mediaUrl = mediaHost ? new URL(mediaHostHasScheme ? mediaHost : `https://$
  */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return ahRedirects()
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
