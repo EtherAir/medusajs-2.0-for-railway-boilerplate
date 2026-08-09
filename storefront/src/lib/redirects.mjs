@@ -22,8 +22,7 @@ const catalog = JSON.parse(
 const CONTENT_RULES = [
   { source: "/aboutus.htm", destination: "/our-story", permanent: true },
   { source: "/concept.htm", destination: "/learn/concept", permanent: true },
-  // /faq ships with M5 — interim target keeps the equity flowing:
-  { source: "/FAQ.htm", destination: "/learn", permanent: false },
+  { source: "/FAQ.htm", destination: "/faq", permanent: true },
   { source: "/nutrigenomics", destination: "/learn", permanent: true },
   { source: "/products.htm", destination: "/shop", permanent: true },
   { source: "/skin-care", destination: "/categories/skin-regeneration", permanent: true },

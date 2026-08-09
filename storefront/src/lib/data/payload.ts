@@ -33,6 +33,9 @@ export const POST_IMAGE_FALLBACK: Record<string, string> = {
   "rose-otto": "/images/ah/imagery/feature-rowse-moss.jpg",
   "minimalist-nightly-ritual": "/images/ah/illustrations/botanical-dandelion.png",
   "sun-skin-regeneration-myth": "/images/ah/imagery/community-water.jpg",
+  "root-canal": "/images/ah/imagery/editorial-portrait-bw.png",
+  "fluoride": "/images/ah/imagery/macro-clay.png",
+  "nutrigenomics": "/images/ah/imagery/hero-moss-landscape.png",
 }
 
 export const getPosts = cache(async (): Promise<CmsPost[]> => {
