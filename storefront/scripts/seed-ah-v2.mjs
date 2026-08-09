@@ -142,6 +142,10 @@ const { sales_channels } = await api("/admin/sales-channels?limit=10")
 const channel = sales_channels?.[0]
 if (!channel) throw new Error("No sales channel found")
 
+const { shipping_profiles } = await api("/admin/shipping-profiles?limit=10")
+const shippingProfile = shipping_profiles?.[0]
+if (!shippingProfile) throw new Error("No shipping profile found")
+
 let { stock_locations } = await api("/admin/stock-locations?limit=10")
 let location = stock_locations?.[0]
 if (!location && !DRY) {
@@ -206,6 +210,7 @@ for (const p of productList) {
   const metadata = buildMetadata(p)
   const base = {
     title: p.title,
+    shipping_profile_id: shippingProfile.id,
     subtitle: p.subtitle,
     status: p.status,
     categories: p.categories.map((h) => ({ id: catIds[h] })),
