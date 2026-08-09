@@ -21,6 +21,9 @@ export type AhProductContent = {
   design: string[]
   frequencies: string[]
   use: string | null
+  ingredients: string | null
+  warnings: string | null
+  crossSell: string[]
   priceLine: string | null
 }
 
@@ -58,6 +61,15 @@ export function getAhProductContent(
     design: toList(m.ah_design),
     frequencies: toList(m.ah_frequencies),
     use: typeof m.ah_use === "string" && m.ah_use.trim() ? m.ah_use : null,
+    ingredients:
+      typeof m.ah_ingredients === "string" && m.ah_ingredients.trim()
+        ? m.ah_ingredients
+        : null,
+    warnings:
+      typeof m.ah_warnings === "string" && m.ah_warnings.trim()
+        ? m.ah_warnings
+        : null,
+    crossSell: toList(m.ah_cross_sell),
     priceLine:
       typeof m.ah_price_line === "string" && m.ah_price_line.trim()
         ? m.ah_price_line

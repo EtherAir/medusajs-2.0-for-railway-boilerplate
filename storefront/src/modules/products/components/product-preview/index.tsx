@@ -33,7 +33,11 @@ export default async function ProductPreview({
   })
 
   const hasVariedPrices =
-    (pricedProduct.variants?.length ?? 0) > 1
+    new Set((pricedProduct.variants ?? []).map((v) => v.calculated_price?.calculated_amount)).size > 1
+
+  const soldOut = (pricedProduct.variants ?? []).every(
+    (v) => v.manage_inventory && (v.inventory_quantity ?? 0) <= 0
+  )
 
   return (
     <LocalizedClientLink
@@ -56,9 +60,14 @@ export default async function ProductPreview({
           )}
         </div>
         {cheapestPrice && (
-          <div className="mt-2 text-p2 leading-none flex gap-1">
-            {hasVariedPrices && <span>from</span>}
-            <PreviewPrice price={cheapestPrice} />
+          <div className="mt-2 text-p2 leading-none flex gap-2 items-baseline">
+            <span className="flex gap-1">
+              {hasVariedPrices && <span>from</span>}
+              <PreviewPrice price={cheapestPrice} />
+            </span>
+            {soldOut && (
+              <span className="text-ah-muted uppercase">Out of stock</span>
+            )}
           </div>
         )}
       </div>

@@ -66,6 +66,16 @@ export function UseAndPolicies({ content }: { content: AhProductContent }) {
             {content.use}
           </AhAccordionItem>
         )}
+        {content.ingredients && (
+          <AhAccordionItem label="Key ingredients" value="ingredients">
+            {content.ingredients}
+          </AhAccordionItem>
+        )}
+        {content.warnings && (
+          <AhAccordionItem label="Warnings & storage" value="warnings">
+            {content.warnings}
+          </AhAccordionItem>
+        )}
         {POLICIES.map((pol) => (
           <AhAccordionItem key={pol.label} label={pol.label} value={pol.label}>
             {pol.body}

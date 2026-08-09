@@ -25,13 +25,26 @@ export default async function RelatedProducts({
 
   const category = product.categories?.[0]
 
+  // Approved cross-sells take precedence over category-mates
+  let crossSell: string[] = []
+  try {
+    const raw = (product.metadata as Record<string, unknown> | null)?.ah_cross_sell
+    if (typeof raw === "string") crossSell = JSON.parse(raw)
+    else if (Array.isArray(raw)) crossSell = raw as string[]
+  } catch {
+    crossSell = []
+  }
+
   const queryParams: HttpTypes.StoreProductParams & {
     category_id?: string[]
+    handle?: string[]
   } = { limit: 8 }
   if (region?.id) {
     queryParams.region_id = region.id
   }
-  if (category) {
+  if (crossSell.length) {
+    queryParams.handle = crossSell
+  } else if (category) {
     queryParams.category_id = [category.id]
   } else if (product.collection_id) {
     queryParams.collection_id = [product.collection_id]
