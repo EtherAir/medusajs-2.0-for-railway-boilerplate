@@ -30,7 +30,7 @@ export default function CategoryIndex() {
     cat,
     i,
     product:
-      cat.products.find((p) => p.handle === CATEGORY_FEATURE[cat.numeral]) ||
+      cat.products.find((p) => p.handle === CATEGORY_FEATURE[cat.handle]) ||
       cat.products[0],
   }))
 

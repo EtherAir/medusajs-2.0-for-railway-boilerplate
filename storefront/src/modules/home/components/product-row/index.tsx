@@ -8,9 +8,10 @@ import AhProductCard from "@modules/common/components/ah/product-card"
  * category) in a 6-up row, closed by a hairline rule.
  */
 export default function ProductRow() {
-  const featured = AH_CATEGORIES.map(
+  // 6-up row per the comp — first six categories' featured formulas
+  const featured = AH_CATEGORIES.slice(0, 6).map(
     (cat) =>
-      cat.products.find((p) => p.handle === CATEGORY_FEATURE[cat.numeral]) ||
+      cat.products.find((p) => p.handle === CATEGORY_FEATURE[cat.handle]) ||
       cat.products[0]
   )
 

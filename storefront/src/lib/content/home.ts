@@ -26,17 +26,17 @@ export const HOME_STATEMENT =
 export const HOME_FEATURES = [
   {
     image: "/images/ah/imagery/feature-rowse-moss.jpg",
-    name: "FOUNDATIONS",
-    descriptor: "phytoplankton & blue green algae\nsuperfood with tetraselmis chuii",
-    price: "$168",
-    handle: "foundations",
+    name: "Marine Phytoplankton",
+    descriptor: "supercharged nutrigenomic superfood,\nabsorbed at the microcellular level",
+    price: "from $168",
+    handle: "marine-phytoplankton",
   },
   {
     image: "/images/ah/imagery/feature-lesse-rocks.jpg",
-    name: "REGENERATE",
-    descriptor: "skin oil with rose otto",
+    name: "I Am Beautiful Oil",
+    descriptor: "skin regeneration oil",
     price: "from $65",
-    handle: "regenerate",
+    handle: "i-am-beautiful-oil",
   },
 ]
 
@@ -111,12 +111,15 @@ export const HOME_BLOG_CARDS = [
   },
 ]
 
-/** Featured formula per category for the homepage category-index panel. */
+/** Featured formula per category (keyed by category handle) for the
+ *  homepage category-index panel and product row. */
 export const CATEGORY_FEATURE: Record<string, string> = {
-  "I.": "recover",
-  "II.": "regenerate",
-  "III.": "foundations",
-  "IV.": "superconscious",
-  "V.": "biome-detox",
-  "VI.": "extend",
+  "dental-gum-care": "regular-strength-oralive",
+  "skin-regeneration": "i-am-beautiful-oil",
+  "superfood-supplements": "marine-phytoplankton",
+  "energetic-consciousness": "sufi-bliss-ascension-oil",
+  "skin-infection-healing": "anti-venom-balm",
+  "liquid-probiotics": "proalive-probiotic",
+  "longevity": "prana-longevity-powder",
+  "ah-cafe": "auracle-healing-cards",
 }

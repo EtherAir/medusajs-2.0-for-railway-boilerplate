@@ -15,7 +15,7 @@ export default function MegaMenu({ onNavigate }: { onNavigate?: () => void }) {
       className="relative min-h-[411px] bg-ah-page border-b-hairline border-ah-ink px-7 pt-v42 pb-24 hidden small:block"
       data-testid="mega-menu"
     >
-      <div className="grid grid-cols-6 gap-6">
+      <div className={AH_CATEGORIES.length > 6 ? "grid grid-cols-4 gap-x-6 gap-y-10" : "grid grid-cols-6 gap-6"}>
         {AH_CATEGORIES.map((cat) => (
           <div key={cat.numeral}>
             <LocalizedClientLink

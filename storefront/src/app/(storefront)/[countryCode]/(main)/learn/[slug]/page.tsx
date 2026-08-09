@@ -42,7 +42,7 @@ export default async function PostPage(props: {
   let featured: any[] = []
   if (region) {
     const { response } = await getProductsList({
-      queryParams: { handle: ["heal", "rejuvenate", "remedy"], limit: 3 } as any,
+      queryParams: { handle: ["triple-skin-oil", "dermalive-topical-probiotic", "regular-strength-oralive"], limit: 3 } as any,
       countryCode,
     }).catch(() => ({ response: { products: [] } }))
     featured = response.products
