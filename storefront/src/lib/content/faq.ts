@@ -1,7 +1,7 @@
 /**
  * FAQ content — migrated verbatim from the legacy site's FAQ.htm
- * (the strongest orphaned page on the old site per the migration
- * inventory). GENERATED from scripts/data/ah-articles.json.
+ * (typo pass applied 2026-08-08; brand lexicon preserved).
+ * GENERATED from scripts/data/ah-articles.json.
  */
 export type FaqItem = { question: string; answer: string }
 
@@ -23,16 +23,16 @@ export const FAQ: FaqItem[] = [
     "answer": "After placing your order online, please email us immediately with the correct address."
   },
   {
-    "question": "How do I use Oralive for greatest effectivity?",
+    "question": "How do I use Oralive for greatest effectiveness?",
     "answer": "Oralive can be used as one would their regular toothpaste. Apply a pea-sized amount to your toothbrush and brush as usual. After brushing, swish around the mouth like a mouthwash for 1-5 minutes (no need to add water as you will produce enough saliva to swish) and either spit it out or swallow it for it to benefit the pathway all the way to the gut. After spitting or swallowing, do not rinse your mouth to allow the paste residue to soak into your teeth and gums."
   },
   {
-    "question": "What is the difference between Regular Strength Oralive and Extra Strenght Oralive? How do I choose the right one for me?",
+    "question": "What is the difference between Regular Strength Oralive and Extra Strength Oralive? How do I choose the right one for me?",
     "answer": "Both formulas have the same basic foundation; extra strength comes with 10x the potency of all the active ingredients. If you are generally balanced in the mouth with no specific concerns in the teeth and gums, regular strength will be just fine. If you have an imbalance in the mouth that you wish to manage or are prone to dental issues, extra strength is best. Once you are back in balance, you may opt to switch back to regular strength so that your body can respond to the potency of extra strength if/when needed. Many people will alternate between the two strengths - regular strength in the morning and extra strength at night, for example.\n\nFor additional oral support, consider Super Gum Oil."
   },
   {
     "question": "My dentist says I need a root canal/cavity work. Which products can help me avoid this?",
-    "answer": "In general, our products work best in the earlier phases of a concern, such as prevention. Oralive is used by many people to help manage symptoms that lead to a root canal as the paste can help oral cavity bring itself back into balance. As we continue eating what we eat, problems can come back. In our opinion, with consistent use, it can maintain balanced conditions in the mouth.\n\nOne protocol that can help with prevention of a root canal and the bacterial imbalances that precede and follow it is as follows using Super Gum Oil, Oralive, and ProAlive Probiotic:\n\nStep 1- Super Gum Oil: place 2-4 drops in the mouth, swish with saliva for 3-5 minutes minimum. Spit it out really well into a napkin or trash bin - do not swallow.\n\nStep 2- Oralive \"burrito\" packing: cut out a square-sized gauze pad (to the length of the area that needs support), spread the Oralive paste on, roll it up, and tuck it into the gum near the tooth that is sensitive or in pain. Leave it on as long as possible -- up to an hour if you can. Repeat this daily up to two times a day.\n\nStep 3- The liquid ProAlive probiotic can be applied directly on the tooth. Keep 2-3 drops on the tooth for up to 3minutes and swallow.\n\nDo not rinse mouth with water or mouthwash after ProAlive and Oralive.\n\nResults vary with each person, in part depending on how long the infection has been going on."
+    "answer": "In general, our products work best in the earlier phases of a concern, such as prevention. Oralive is used by many people to help manage symptoms that lead to a root canal as the paste can help oral cavity bring itself back into balance. As we continue eating what we eat, problems can come back. In our opinion, with consistent use, it can maintain balanced conditions in the mouth.\n\nOne protocol that can help with prevention of a root canal and the bacterial imbalances that precede and follow it is as follows using Super Gum Oil, Oralive, and ProAlive Probiotic:\n\nStep 1- Super Gum Oil: place 2-4 drops in the mouth, swish with saliva for 3-5 minutes minimum. Spit it out really well into a napkin or trash bin - do not swallow.\n\nStep 2- Oralive \"burrito\" packing: cut out a square-sized gauze pad (to the length of the area that needs support), spread the Oralive paste on, roll it up, and tuck it into the gum near the tooth that is sensitive or in pain. Leave it on as long as possible -- up to an hour if you can. Repeat this daily up to two times a day.\n\nStep 3- The liquid ProAlive probiotic can be applied directly on the tooth. Keep 2-3 drops on the tooth for up to 3 minutes and swallow.\n\nDo not rinse mouth with water or mouthwash after ProAlive and Oralive.\n\nResults vary with each person, in part depending on how long the infection has been going on."
   },
   {
     "question": "My teeth seem darker after using Oralive. Is this staining permanent?",

@@ -1,5 +1,4 @@
 import { HttpTypes } from "@medusajs/types"
-import { Text } from "@medusajs/ui"
 
 type OrderDetailsProps = {
   order: HttpTypes.StoreOrder
@@ -15,45 +14,39 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
 
   return (
     <div>
-      <Text>
+      <p className="text-p2 m-0">
         We have sent the order confirmation details to{" "}
-        <span
-          className="text-ui-fg-medium-plus font-semibold"
-          data-testid="order-email"
-        >
-          {order.email}
-        </span>
-        .
-      </Text>
-      <Text className="mt-2">
+        <span data-testid="order-email">{order.email}</span>.
+      </p>
+      <p className="text-p2 m-0 mt-2 text-ah-muted">
         Order date:{" "}
         <span data-testid="order-date">
           {new Date(order.created_at).toDateString()}
         </span>
-      </Text>
-      <Text className="mt-2 text-ui-fg-interactive">
+      </p>
+      <p className="text-p2 m-0 mt-2">
         Order number: <span data-testid="order-id">{order.display_id}</span>
-      </Text>
+      </p>
 
-      <div className="flex items-center text-compact-small gap-x-4 mt-4">
+      <div className="flex items-center text-p2 gap-x-4 mt-4">
         {showStatus && (
           <>
-            <Text>
+            <p className="text-p2 m-0">
               Order status:{" "}
-              <span className="text-ui-fg-subtle " data-testid="order-status">
+              <span className="text-ah-muted" data-testid="order-status">
                 {/* TODO: Check where the statuses should come from */}
                 {/* {formatStatus(order.fulfillment_status)} */}
               </span>
-            </Text>
-            <Text>
+            </p>
+            <p className="text-p2 m-0">
               Payment status:{" "}
               <span
-                className="text-ui-fg-subtle "
+                className="text-ah-muted"
                 sata-testid="order-payment-status"
               >
                 {/* {formatStatus(order.payment_status)} */}
               </span>
-            </Text>
+            </p>
           </>
         )}
       </div>

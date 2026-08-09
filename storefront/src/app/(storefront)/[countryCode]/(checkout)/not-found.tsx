@@ -1,19 +1,27 @@
-import InteractiveLink from "@modules/common/components/interactive-link"
 import { Metadata } from "next"
 
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+
 export const metadata: Metadata = {
-  title: "404",
-  description: "Something went wrong",
+  title: "404 | Ascended Health",
+  description: "The page you tried to access does not exist.",
 }
 
-export default async function NotFound() {
+export default function NotFound() {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center min-h-[calc(100vh-64px)]">
-      <h1 className="text-2xl-semi text-ui-fg-base">Page not found</h1>
-      <p className="text-small-regular text-ui-fg-base">
-        The page you tried to access does not exist.
-      </p>
-      <InteractiveLink href="/">Go to frontpage</InteractiveLink>
-    </div>
+    <main className="pt-[100px] min-h-[600px]">
+      <div className="content-container pb-[121px]">
+        <h1 className="text-h1 m-0">Page not found</h1>
+        <p className="text-p1 mt-4 max-w-[600px] m-0">The page you tried to access does not exist.</p>
+        <div className="mt-7">
+          <LocalizedClientLink
+            href="/cart"
+            className="text-p2 text-ah-ink no-underline transition-ah hover:text-ah-dark-seafoam"
+          >
+            Back to cart <span aria-hidden="true">→</span>
+          </LocalizedClientLink>
+        </div>
+      </div>
+    </main>
   )
 }

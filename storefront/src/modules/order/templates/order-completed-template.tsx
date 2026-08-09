@@ -1,5 +1,6 @@
-import { Heading } from "@medusajs/ui"
 import { cookies } from "next/headers"
+
+import { AhRule } from "@modules/common/components/ah"
 
 import CartTotals from "@modules/common/components/cart-totals"
 import Help from "@modules/order/components/help"
@@ -20,31 +21,32 @@ export default function OrderCompletedTemplate({
   const isOnboarding = cookies().get("_medusa_onboarding")?.value === "true"
 
   return (
-    <div className="py-6 min-h-[calc(100vh-64px)]">
-      <div className="content-container flex flex-col justify-center items-center gap-y-10 max-w-4xl h-full w-full">
+    <main className="pt-[88px] min-h-[600px]">
+      <div
+        className="content-container max-w-[900px] pb-[121px]"
+        data-testid="order-complete-container"
+      >
         {isOnboarding && <OnboardingCta orderId={order.id} />}
-        <div
-          className="flex flex-col gap-4 max-w-4xl h-full bg-white w-full py-10"
-          data-testid="order-complete-container"
-        >
-          <Heading
-            level="h1"
-            className="flex flex-col gap-y-3 text-ui-fg-base text-3xl mb-4"
-          >
-            <span>Thank you!</span>
-            <span>Your order was placed successfully.</span>
-          </Heading>
-          <OrderDetails order={order} />
-          <Heading level="h2" className="flex flex-row text-3xl-regular">
-            Summary
-          </Heading>
-          <Items items={order.items} />
-          <CartTotals totals={order} />
-          <ShippingDetails order={order} />
-          <PaymentDetails order={order} />
-          <Help />
+        <h1 className="text-h1 m-0 whitespace-pre-line">
+          {"Thank you!\nYour order was placed successfully."}
+        </h1>
+        <div className="mt-[26px]">
+          <AhRule />
         </div>
+        <div className="pt-v42">
+          <OrderDetails order={order} />
+        </div>
+        <h2 className="text-p1 uppercase mt-v49 mb-4 pb-3 border-b-hairline border-ah-ink">
+          Order summary
+        </h2>
+        <Items items={order.items} />
+        <div className="mt-6 pt-[18px] border-t-hairline border-ah-ink">
+          <CartTotals totals={order} />
+        </div>
+        <ShippingDetails order={order} />
+        <PaymentDetails order={order} />
+        <Help />
       </div>
-    </div>
+    </main>
   )
 }

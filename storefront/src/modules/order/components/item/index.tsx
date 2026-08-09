@@ -1,5 +1,4 @@
 import { HttpTypes } from "@medusajs/types"
-import { Table, Text } from "@medusajs/ui"
 
 import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
@@ -10,40 +9,33 @@ type ItemProps = {
   item: HttpTypes.StoreCartLineItem | HttpTypes.StoreOrderLineItem
 }
 
+/** Order line: thumbnail, caps name + variant, qty × unit, line total. */
 const Item = ({ item }: ItemProps) => {
   return (
-    <Table.Row className="w-full" data-testid="product-row">
-      <Table.Cell className="!pl-0 p-4 w-24">
-        <div className="flex w-16">
+    <div
+      className="flex gap-4 items-start justify-between"
+      data-testid="product-row"
+    >
+      <div className="flex gap-4 items-start">
+        <div className="w-14 flex-none">
           <Thumbnail thumbnail={item.thumbnail} size="square" />
         </div>
-      </Table.Cell>
-
-      <Table.Cell className="text-left">
-        <Text
-          className="txt-medium-plus text-ui-fg-base"
-          data-testid="product-name"
-        >
-          {item.title}
-        </Text>
-        {item.variant && (
+        <div className="text-p2">
+          <span className="uppercase block" data-testid="product-name">
+            {item.product_title ?? item.title}
+          </span>
           <LineItemOptions variant={item.variant} data-testid="product-variant" />
-        )}
-      </Table.Cell>
-
-      <Table.Cell className="!pr-0">
-        <span className="!pr-0 flex flex-col items-end h-full justify-center">
-          <span className="flex gap-x-1 ">
-            <Text className="text-ui-fg-muted">
-              <span data-testid="product-quantity">{item.quantity}</span>x{" "}
-            </Text>
+          <span className="text-ah-muted flex gap-1 items-baseline">
+            <span data-testid="product-quantity">{item.quantity}</span>
+            <span>×</span>
             <LineItemUnitPrice item={item} style="tight" />
           </span>
-
-          <LineItemPrice item={item} style="tight" />
-        </span>
-      </Table.Cell>
-    </Table.Row>
+        </div>
+      </div>
+      <span className="text-p2 flex-none">
+        <LineItemPrice item={item} style="tight" />
+      </span>
+    </div>
   )
 }
 
